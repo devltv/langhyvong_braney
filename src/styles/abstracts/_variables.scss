@@ -55,69 +55,44 @@ $size: (
 );
 
 $title: (
-	h1:(
+	big:(
 		default: 4.8rem,
 		tx: 4rem,
 		mx: 3.8rem
 	),
-	h2: (
+	small:(
 		default: 3.4rem,
-		tx: 3.2rem,
-		mx: 3rem
+		tx: 3rem,
+		mx: 2.8rem
 	),
-	h3: (
-		default: 2.8rem,
-		tx: 2.7rem,
-		mx: 2.6rem
+	sub:(
+		default: 2.4rem,
+		tx: 2.2rem,
+		mx: 2rem
 	),
-	h4: (
-		default: 2.2rem,
-		tx: 2.1rem,
-	),
-	h5: (
+	body: (
 		default: 1.8rem,
+		tx: 1.6rem,
+		mx: 1.6rem
 	),
+	note: (
+		default: 1.6rem,
+		tx: 1.5rem,
+		mx: 14px
+	)
 );
 
 $lineHeight:(
-	h1: (
-		default: 5.2rem,
-	),
-	h2: (
-		default: 4.1rem,
-	),
-	h3: (
-		default: 3.8rem,
-	),
-	h4: (
-		default: 3.2rem,
-	),
-	h5: (
-		default: 2.6rem,
-	),
-
-	body1: (
-		default: 2.4rem,
-	),
-	body2: (
-		default: 2.2rem,
-	),
-	sub2: (
-		default: 2.4rem,
-	),
-
-	button1:(
-		default: auto
-	),
+	
 );
 
 // Cách sử dụng: map-get($media, ps);
 // Hoặc là: @include rp(ps);
 $media: (
 	// personal computer
-	// px: 1920px,
-	// pl: 1680px,
-	// pm: 1440px,
+	px: 1920px,
+	pl: 1680px,
+	pm: 1440px,
 	ps: 1336px,
 	// tablet
 	tx: 1280px,
@@ -157,13 +132,17 @@ $media: (
 // Cách sử dụng: Không tùy chỉnh trong đây (phần này mặc định)
 // kích thước 1183px (grid layout)
 $container-max-widths: (
-	default: 1183px,
-	tx: 860px,
-	tm: 94%,
+	// default: 1183px,
+	// tx: 860px,
+	// tm: 94%,
 	// pm: 1200px,
 	// tx: 960px,
 	// tl: 96%,
 	// về talet thì sẽ width = 96%;
+
+	default:1260px,
+	tx: 1020px,
+	tl: 96%
 );
 
 // kích thước 1256px (grid layout)
@@ -206,44 +185,15 @@ $block: (
 // chú ý khi khoảng cách giống nhau nhưng media khác nhau thì có thể thêm đằng sau là -2 -3 (loại 2 loại 3)
 
 $space: (
-	// reika team
-
-
-
-	// design team
-	// // Khoảng cách ngoài của section
-	// s80: (
-	// 	default: 80px,
-	// 	pm: 64px,
-	// 	tl: 56px,
-	// 	mx: 40px,
-	// 	mm: 32px,
-	// ),
-
-	// // đa số khoảng cách dùng từ title đến content
-	// s40: (
-	// 	default: 40px,
-	// 	pm: 36px,
-	// 	tl: 32px,
-	// 	mx: 28px,
-	// 	mm: 24px
-	// ),
-	// s20: (
-	// 	default: 20px,
-	// ),
-	// s16: (
-	// 	default: 16px,
-	// ),
-
-	// swiperSp: (
-	// 	default: 8px,
-	// ),
-	// swiperBtn:(
-	// 	default: 50px,
-	// )
+	s60: (
+		default: 6em,
+	),
 );
 
+// khoảng cách các section
+$section: (
 
+);
 
 
 ///////////////////// LAYOUT ////////////////////////////
