@@ -1,62 +1,62 @@
-.dropdown{
-    width: 230px;
-    position: relative;
-    cursor: pointer;
-    // z-index: 99999;
-    &__title{
-        &>*{
-            @include button1;
-            color: map-get($color , core-black );
-        }
-    }
-    &__btn{
-        margin-top: 8px;
-        display: flex;
-        width: 100%;
-        border: 1px solid map-get($color , main );
-        .desc{
-            padding-left: 15px;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            flex: 1;
-            @include body1;
-            color: #666666;
-        }
-        &--icons{
-            padding: 15px;
+// .dropdown{
+//     width: 230px;
+//     position: relative;
+//     cursor: pointer;
+//     // z-index: 99999;
+//     &__title{
+//         &>*{
+//             @include button1;
+//             color: map-get($color , core-black );
+//         }
+//     }
+//     &__btn{
+//         margin-top: 8px;
+//         display: flex;
+//         width: 100%;
+//         border: 1px solid map-get($color , main );
+//         .desc{
+//             padding-left: 15px;
+//             padding-top: 15px;
+//             padding-bottom: 15px;
+//             flex: 1;
+//             @include body1;
+//             color: #666666;
+//         }
+//         &--icons{
+//             padding: 15px;
             
-        }
+//         }
        
-    }
-    &__menu{
-        max-height: 167px;
-        overflow-y: scroll;
-        position: absolute;
-        background: map-get($color ,clear-white);
-        top: 100%;
-        left: 0%;
-        right: 0%;
-        width: 100%;
-        height: auto;
-        box-shadow: 0px 3px 6px rgba(#000, 0.2);
-        padding-bottom: 15px;
-        z-index: 99999;
-        display: none;
-        &.active{
-            display: block;
-        }
-        &--list{
-            list-style-type: none;
-        }
-        &--items{
+//     }
+//     &__menu{
+//         max-height: 167px;
+//         overflow-y: scroll;
+//         position: absolute;
+//         background: map-get($color ,clear-white);
+//         top: 100%;
+//         left: 0%;
+//         right: 0%;
+//         width: 100%;
+//         height: auto;
+//         box-shadow: 0px 3px 6px rgba(#000, 0.2);
+//         padding-bottom: 15px;
+//         z-index: 99999;
+//         display: none;
+//         &.active{
+//             display: block;
+//         }
+//         &--list{
+//             list-style-type: none;
+//         }
+//         &--items{
             
-            padding-left: 15px;
-            padding-top: 15px;
-            &>*{
-                @include body1;
-                color: #666666;
-            }
+//             padding-left: 15px;
+//             padding-top: 15px;
+//             &>*{
+//                 @include body1;
+//                 color: #666666;
+//             }
             
-        }
-    }
-}
+//         }
+//     }
+// }
