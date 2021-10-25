@@ -5,10 +5,10 @@
 	margin: 0;
 	padding: 0;
 }
-*::after, 
-*::before{
-  content: "";
-}
+// *::after, 
+// *::before{
+//   content: "";
+// }
 html {
 	// trình duyệt mặc định font-size: 16px
 	-webkit-text-size-adjust: 100%;
@@ -90,9 +90,6 @@ hr {
 // 	margin-top: 0;
 // 	margin-bottom: 0;
 // }
-p{
-	text-align: justify;
-}
 
 abbr[title],
 abbr[data-original-title] {
