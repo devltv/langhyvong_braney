@@ -26,16 +26,16 @@ import {dropdown} from "./layout/dropdown";
 
 // Page
 import {index} from "./pages/index";
-import {careersSubpages} from "./pages/careersSubpages";
-import {careersSubchildren} from "./pages/careersSubchildren";
-import {careersJob} from "./pages/careersJob";
-import {farmSubchildren} from "./pages/farmSubchildren";
-import {subPages} from "./pages/subpages";
-import {contactPage} from "./pages/contact";
-import {newsPage} from "./pages/news";
-import {aboutNetwork} from "./pages/about-network";
-import {deploy} from "./pages/deploy";
-import {sustainPage} from "./pages/Sustain";
+// import {careersSubpages} from "./pages/careersSubpages";
+// import {careersSubchildren} from "./pages/careersSubchildren";
+// import {careersJob} from "./pages/careersJob";
+// import {farmSubchildren} from "./pages/farmSubchildren";
+// import {subPages} from "./pages/subpages";
+// import {contactPage} from "./pages/contact";
+// import {newsPage} from "./pages/news";
+// import {aboutNetwork} from "./pages/about-network";
+// import {deploy} from "./pages/deploy";
+// import {sustainPage} from "./pages/Sustain";
 
 // import { interpolate } from "gsap/all";
 
@@ -57,16 +57,16 @@ function layout(){
 function page(){
   // ----- add page in here ----- //
   index();
-  careersSubpages();
-  careersSubchildren();
-  farmSubchildren();
-  careersJob();
-  subPages();
-  contactPage();
-  newsPage();
-  aboutNetwork();
-  deploy();
-  sustainPage();
+  // careersSubpages();
+  // careersSubchildren();
+  // farmSubchildren();
+  // careersJob();
+  // subPages();
+  // contactPage();
+  // newsPage();
+  // aboutNetwork();
+  // deploy();
+  // sustainPage();
 }
 
 
