@@ -1,0 +1,11 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Village';
+	- let bodyClass = 'village-page';
+
+block main
+	div(id="villagePage")
+		include _templates/village/v-1
+
+block scripts
