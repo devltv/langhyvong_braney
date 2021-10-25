@@ -1,0 +1,315 @@
+@mixin family--primary {
+  font-family: map-get($family, primary), sans-serif;
+}
+
+@mixin p-line-clamp ($i) {
+  display: -webkit-box;
+  -webkit-line-clamp: #{$i};
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin uppercase{
+  text-transform: uppercase;
+}
+@mixin italic{
+  font-style: italic;
+}
+
+////////////////////////////////////////////////
+//////////// FONT WEIGHT //////////////////////
+
+@mixin thin{
+  font-weight: 100;
+}
+@mixin extra-light{
+  font-weight: 200;
+}
+@mixin light{
+  font-weight: 300;
+}
+@mixin regular{
+  font-weight: 400;
+}
+@mixin normal{
+  font-weight: 400;
+}
+@mixin medium{
+  font-weight: 500;
+}
+@mixin semi-bold{
+  font-weight: 600;
+}
+@mixin bold{
+  font-weight: 700;
+}
+@mixin extra-bold{
+  font-weight: 800;
+}
+@mixin ultra-bold{
+  font-weight: 900;
+}
+
+//////////// FONT WEIGHT ///////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// FONT SIZE /////////////////////////
+
+// @mixin size($s)
+// {
+//   font-size: map-get($sizes, #{$s});
+// @each $size, $keyVal in $sizes{
+//   .size-#{$size}{
+//     font-size: $keyVal;
+//   }
+// }
+
+// @mixin size($size)
+// {
+//   font-size: map-get($sizes, #{$size});
+// }
+
+@mixin size($key){
+  @each $idx, $val in map-get($size, #{$key}){
+    @if $idx == default{
+      font-size: $val;
+    }
+    @else{
+      @media (max-width: map-get($media, $idx)){
+        font-size: $val;
+      }
+    }
+  }
+}
+
+@mixin title($key){
+  @each $idx, $val in map-get($title, #{$key}){
+    @if $idx == default{
+      font-size: $val;
+    }
+    @else{
+      @media (max-width: map-get($media, $idx)){
+        font-size: $val;
+      }
+    }
+  }
+}
+
+@mixin lineHeight($key){
+  @each $idx, $val in map-get($lineHeight, #{$key}){
+    @if $idx == default{
+      line-height: $val;
+    }
+    @else{
+      @media (max-width: map-get($media, $idx)){
+        line-height: $val;
+      }
+    }
+  }
+}
+
+@mixin h1{
+  @include title(h1);
+  @include bold;
+  @include lineHeight(h1);
+  letter-spacing: 0.1px;
+}
+@mixin h2{
+  @include title(h2);
+  @include medium;
+  @include lineHeight(h2);
+  letter-spacing: 1%;
+}
+@mixin h3{
+  @include title(h3);
+  @include medium;
+  @include lineHeight(h3);
+  letter-spacing: 0.1%;
+}
+@mixin h4{
+  @include title(h4);
+  @include medium;
+  @include lineHeight(h4);
+  letter-spacing: 0.15px;
+}
+@mixin h5{
+  @include title(h5);
+  @include medium;
+  @include lineHeight(h5);
+  letter-spacing: 2%;
+}
+
+@mixin body1{
+  @include size(body1);
+  @include regular;
+  @include lineHeight(body1);
+  letter-spacing: 1%;
+}
+@mixin body2{
+  @include size(body2);
+  @include regular;
+  @include lineHeight(body2);
+  letter-spacing: 0.1%;
+}
+@mixin sub2{
+  @include size(sub2);
+  @include regular;
+  @include lineHeight(sub2);
+  letter-spacing: 0.1px;
+}
+@mixin button1{
+  @include size(button1);
+  @include medium;
+  @include lineHeight(button1);
+  letter-spacing: 1%;
+}
+
+
+//////////// FONT SIZE ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// Shadow ////////////////////////
+
+@mixin shadow($sd){
+  box-shadow: map-get($shadow, #{$sd});
+}
+
+//////////// Shadow ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+//////////// Gradient ////////////////////////
+
+@mixin ovlGradient($ovl)
+{
+  background-color: map-get($color, #{$ovl});
+  background-image: map-get($ovlGradient, #{$ovl});
+}
+
+//////////// Gradient ////////////////////////
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+//////////// color ////////////////////////
+
+@mixin txt($txt)
+{
+  color: map-get($color, #{$txt});
+}
+
+// @include txt(main);
+//////////// color ////////////////////////
+////////////////////////////////////////////////
+////////////////////////////////////////////////
+//////////// background ////////////////////////
+
+@mixin bg($bg)
+{
+  background-color: map-get($color, #{$bg});
+}
+
+// @include txt(main);
+//////////// background ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+///////////////// BLOCK ////////////////////////
+
+@mixin block($key, $name, $side: -1){
+  @each $idx, $val in map-get($block, #{$key}){
+    @if $side == -1{
+      @if $idx == default{
+        #{$name}: $val;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val;
+        }
+      }
+    }
+    @else{
+      @if $idx == default{
+        #{$name}: $val $side;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val $side;
+        }
+      }
+    }
+  }
+}
+
+///////////////// BLOCK ////////////////////////
+////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////
+///////////////// SPACE ////////////////////////
+
+@mixin space($key, $name, $side: '-1'){
+  @each $idx, $val in map-get($space, #{$key}){
+    @if $side == '-1'{
+      @if $idx == default{
+        #{$name}: $val;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val;
+        }
+      }
+    }
+    @else{
+      @if $idx == default{
+        #{$name}: $val $side;
+      }
+      @else{
+        @media (max-width: map-get($media, $idx)){
+          #{$name}: $val $side;
+        }
+      }
+    }
+  }
+}
+
+///////////////// SPACE ////////////////////////
+////////////////////////////////////////////////
+
+////////////////////////////////////////////////
+///////////////// PAGE ////////////////////////
+
+
+///////////////// SPACE ////////////////////////
+////////////////////////////////////////////////
+
+
+
+// @mixin blockPath($name){
+// 	#{$name}: map-get($block, path);
+
+// 	@each $key, $value in $media{
+// 		@if map-get($block, 'path-#{$key}'){
+// 			@media (max-width: $value) {
+// 					#{$name}: map-get($block, 'path-#{$key}');
+// 			}
+// 		}
+// 	}
+// }
+
+////////////////////////////////////////////////
+/////////////////////////MEDIA ///////////////////
+
+@mixin rp($canvas) {
+  @media (max-width: map-get($media, #{$canvas})){
+    @content;
+  }
+}
+
+/////////////////////////MEDIA ///////////////////
+//////////////////////////////////////////////////

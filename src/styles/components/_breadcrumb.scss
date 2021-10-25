@@ -1,0 +1,38 @@
+#breadcrumb{
+  width: 100%;
+}
+
+.breadcrumb {
+padding-top: 15px;
+padding-bottom: 18px;
+width: 100%;
+&-list {
+    list-style-type: none;
+    display: flex;
+}
+&-item {
+  svg{
+      path{
+        stroke: map-get($color, pure-grey);
+      }
+  }
+    & > * {
+        color: map-get($color, pure-grey);
+        margin-right: 12px;
+        
+    }
+    &.active{
+        .breadcrumb-item__link{
+            color: map-get($color, main);
+        }
+        svg{
+          path{
+            stroke: map-get($color, main);
+          }
+      }
+    }
+    // &__link {
+       
+    // }
+}
+}

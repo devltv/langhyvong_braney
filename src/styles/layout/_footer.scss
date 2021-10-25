@@ -1,0 +1,207 @@
+#footer {
+    background-color: map-get($color, lo);
+    // margin-top: 100px;
+    border-top: solid 3px map-get($color, primary);
+    position: relative;
+    max-width: 1920px;
+    width: 100%;
+    margin: auto;
+    &.indexfooter {
+        padding-top: 20px;
+        background-color: transparent;
+        .footer {
+            padding-bottom: 39%;
+        }
+        .footer-img {
+            display: flex;
+            position: absolute;
+            bottom: -35px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            margin: auto;
+            @include rp(mx) {
+                height: 60%;
+            }
+            &__overlay {
+                position: relative;
+                width: 100%;
+                // img {
+                //     // position: absolute;
+                //     // bottom: 0;
+                //     // right:0;
+                //     // width: auto;
+                //     // object-fit: contain;
+                //     // max-width: unset;
+                // }
+                .mobile {
+                    display: none;
+                }
+                .pc {
+                    display: block;
+                }
+                @media (max-width: 456px) {
+                    .mobile {
+                        display: block;
+                    }
+                    .pc {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .footer-copyright {
+            position: absolute;
+            left: 0;
+        }
+    }
+    .footer-img {
+        display: none;
+    }
+    .footer-copyright {
+        background-color: #424242;
+        width: 100%;
+
+        &__section {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: 15px 0;
+            @include rp(mx) {
+                flex-direction: column;
+            }
+
+            &-decs {
+                &:not(:last-child) {
+                    @include rp(mx){
+                        margin-bottom: 10px;
+                    }
+                    
+                }
+                a,
+                p {
+                    color: map-get($color, clear-white);
+                    text-align: center;
+                }
+            }
+            .term-policy {
+                margin-left: auto;
+                @include rp(mx) {
+                    margin-left: unset;
+                }
+            }
+        }
+    }
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 100px;
+        width: 100%;
+        display: flex;
+        margin: 0 -8px;
+
+        @include rp(mx) {
+            margin: 0;
+            padding-bottom: 50px;
+        }
+        flex-wrap: wrap;
+        &--infor {
+            .jf-social-link {
+                align-items: end;
+                margin: 0;
+                @include rp(mx) {
+                    margin-bottom: 30px;
+                }
+                &__title {
+                    @include body1;
+                }
+            }
+            @include rp(mx) {
+                margin-right: 15px;
+                margin-bottom: 20px;
+            }
+            &__items {
+                &--title {
+                    margin-bottom: 10px;
+                    p,
+                    a {
+                        color: map-get($color, primary);
+                        @include h5;
+                    }
+                    a {
+                        position: relative;
+                        &::after {
+                            border-style: solid;
+                            border-width: 0.15em 0.15em 0 0;
+                            content: "";
+                            display: inline-block;
+                            height: 8px;
+                            right: -5px;
+                            position: absolute;
+                            width: 8px;
+                            top: 50%;
+                            overflow: hidden;
+                            opacity: 0;
+                            transform: translateY(-50%) rotate(45deg);
+                            color: map-get($color, primary);
+                            transition: 0.3s ease-in-out;
+                        }
+                        &:hover {
+                            &::after {
+                                opacity: 1;
+                                right: -15px;
+                            }
+                        }
+                    }
+                }
+                &--link {
+                    ul {
+                        li {
+                            list-style-type: none;
+                            margin-bottom: 10px;
+                            p,
+                            a {
+                                color: map-get($color, pure-grey);
+                                @include body1;
+                                &:hover {
+                                    color: map-get($color, main);
+                                }
+                            }
+                            a {
+                                position: relative;
+                                &::after {
+                                    border-style: solid;
+                                    border-width: 0.15em 0.15em 0 0;
+                                    content: "";
+                                    display: inline-block;
+                                    height: 8px;
+                                    right: -10px;
+                                    position: absolute;
+                                    width: 8px;
+                                    top: 50%;
+                                    transform: translateY(-50%) rotate(45deg);
+                                    color: map-get($color, primary);
+                                    transition: 0.3s ease-in-out;
+                                }
+                                &:hover {
+                                    &::after {
+                                        right: -15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &--link {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            @include rp(mx) {
+                justify-content: space-between;
+            }
+        }
+    }
+}

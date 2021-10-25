@@ -1,0 +1,143 @@
+.box-pagination{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-top: 40px ;
+  @include rp(tx){
+    padding-top: 30px ;
+  }
+  @include rp(mx){
+    padding-top: 20px ;
+  }
+  
+  li{
+    color: map-get($color, btn-next-prev);
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 4.3rem;
+    &:hover{
+      background-color: map-get($color, btn-active);
+      color: map-get($color, icon-active);
+    }
+    @include rp(pm){
+      height: 4rem;
+    }
+    @include rp(tl){
+      height: 3.8rem;
+    }
+    @include rp(mx){
+      height: 3.2rem;
+    }
+
+    font-size: 2.6rem;
+    @include rp(pm){
+      font-size: 2.4rem;
+    }
+    @include rp(tl){
+      font-size: 2.2rem;
+    }
+    @include rp(mx){
+      font-size: 2rem;
+    }
+
+    svg{
+      path{
+        fill: map-get($color, icon-active);
+      }
+      width: 2rem;
+      @include rp(pm){
+        width: 1.8rem;
+      }
+      @include rp(tl){
+        width: 1.6rem;
+      }
+      @include rp(mx){
+        width: 1.5rem;
+      }
+    }
+
+    cursor: pointer;
+    user-select: none;
+
+    &.active{
+      background-color: map-get($color, btn-active);
+      color: map-get($color, icon-active);
+      cursor: initial;
+    }
+  }
+  li.next,
+  li.prev{
+    background-color: map-get($color, btn-next-prev);
+
+    width: 4.3rem;
+    height: 4.3rem;
+    
+    @include rp(pm){
+      width: 4rem;
+      height: 4rem;
+    }
+    @include rp(tl){
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+    @include rp(mx){
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+
+    border-radius: 200px;
+
+    &.btn-hidden{
+      background-color: map-get($color, btn-hiden);
+      cursor: initial;
+      path{
+        fill: map-get($color, btn-next-prev);
+      }
+    }
+  }
+
+  li.prev{
+    svg{
+     
+      transform: rotate(180deg);
+    }
+  }
+  
+  li + li{
+    margin-left: 25px;
+    width: 4.3rem;
+    height: 4.3rem;
+    
+    @include rp(pm){
+      width: 4rem;
+      height: 4rem;
+    }
+    @include rp(tl){
+      width: 3.8rem;
+      height: 3.8rem;
+    }
+    @include rp(mx){
+      width: 3.2rem;
+      height: 3.2rem;
+    }
+    background-color: map-get($color, btn-hiden);
+    border-radius: 50%;
+    @include rp(pm){
+      // margin-left: 28px;
+    }
+    @include rp(tl){
+      margin-left: 20px;
+    }
+    @include rp(mx){
+      margin-left: 18px;
+    }
+    transition: 0.2s ease-in-out;
+    
+  }
+}

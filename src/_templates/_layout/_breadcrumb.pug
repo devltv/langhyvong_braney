@@ -1,0 +1,60 @@
+//- if breadcrumbs
+//-   if breadcrumbs.length
+//-     section#breadcrumb
+//-       .breadcrumb
+//-         ul.breadcrumb-list.container
+//-           each bb, idx in breadcrumbs
+//-             - let attr = {};
+//-             - attr.href = bb[2];
+
+//-             if idx == 0
+//-               if bb[1] == "active"
+//-                 li.breadcrumb-item.active
+//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
+//-               else 
+//-                 li.breadcrumb-item
+//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
+//-             else 
+//-               if bb[1] == "active"
+//-                 li.breadcrumb-item.active
+//-                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                         <path d="M1 1L5 5L1 9" stroke="#F26F21" stroke-linecap="round"/>
+//-                     </svg>
+//-                     a.breadcrumb-item__link()&attributes(attr)= bb[0]
+//-               else 
+//-                 li.breadcrumb-item
+//-                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+//-                         <path d="M1 1L5 5L1 9" stroke="#F26F21" stroke-linecap="round"/>
+//-                     </svg>
+//-                     a.breadcrumb-item__link()&attributes(attr)= bb[0]
+
+
+//- if breadcrumbs
+//-   if breadcrumbs.length
+//-     section#breadcrumb
+//-       .breadcrumb
+//-         ul.breadcrumb-list.container
+//-           each bb, idx in breadcrumbs
+//-             - let attr = {};
+//-             - attr.href = bb[2];
+
+//-             if idx == 0
+//-               if bb[1] == "active"
+//-                 li.breadcrumb-item.active
+//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
+//-               else 
+//-                 li.breadcrumb-item
+//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
+//-             else 
+//-               if bb[1] == "active"
+//-                 li.breadcrumb-item.active
+//-                   <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8">
+//-                     <path id="Polygon_12" data-name="Polygon 12" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#d80606"/>
+//-                   </svg>
+//-                   a.breadcrumb-item__link.uppercase(href="#")= bb[0]
+//-               else 
+//-                 li.breadcrumb-item
+//-                   <svg xmlns="http://www.w3.org/2000/svg" width="7" height="8" viewBox="0 0 7 8">
+//-                     <path id="Polygon_12" data-name="Polygon 12" d="M4,0,8,7H0Z" transform="translate(7) rotate(90)" fill="#d80606"/>
+//-                   </svg>
+//-                   a.breadcrumb-item__link(href="#")= bb[0]

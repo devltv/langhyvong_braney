@@ -1,0 +1,144 @@
+.margin-left-auto{
+  margin-left: auto;
+}
+.margin-right-auto{
+  margin-right: auto;
+}
+.margin-auto{
+  margin: auto;
+}
+
+.display-block, 
+.display{
+  display: block;
+}
+
+.display-inline{
+  display: inline;
+}
+
+.display-flex, 
+.flex{
+  display: flex;
+}
+
+.flex-left{
+  display: flex;
+  justify-content: flex-start;
+}
+
+.flex-center{
+  display: flex;
+  justify-content: center;
+}
+
+.flex-right{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex-left-center{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-right-center{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-center-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-center-left{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex-left-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.flex-center-right{
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.flex-right-right{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.hidden{
+  display: none;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.text-right{
+  text-align: right;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+.lowercase{
+  text-transform: lowercase;
+}
+
+.italic{
+  font-style: italic;
+}
+
+.thin{
+  @include thin;
+}
+
+.ex-light{
+  @include extra-light;
+}
+
+.ligth{
+  @include light;
+}
+
+.regular{
+  @include regular;
+}
+
+.medium{
+  @include medium;
+}
+
+.se-bold{
+  @include semi-bold;
+}
+
+.bold{
+  @include bold;
+}
+
+.ex-bold{
+  @include extra-bold;
+}
+
+.ul-bold{
+  @include ultra-bold;
+}

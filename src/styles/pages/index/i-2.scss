@@ -1,0 +1,118 @@
+.index-2{
+  .scope{
+    margin-bottom: 100px;
+    @include rp(mx){
+      margin-bottom: 80px;
+    }
+    &-content{  
+      margin-top: 76px;
+      width: 80%;
+      @include rp(mx){
+        width: 100%;
+      }
+      &__title{
+        @include rp(mx){
+          text-align: center;
+        }
+        &>*{
+          @include h2;
+        }
+      }
+      &__desc{
+        margin-top: 16px;
+        &>*{
+          @include body1;
+        }
+      }
+    }
+
+    &-logo{
+      margin-top: 36px;
+
+      &-item{
+        display: flex;
+        align-items: center;
+
+        @include rp(mx){
+          flex-direction: column;
+
+          overflow: hidden;
+        }
+        
+        &__title{
+          min-width: 170px;
+          width: 170px;
+          max-width: 170px;
+          
+          align-self: stretch;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          margin-right: 30px;
+          max-height: 56px;
+
+          @include rp(mx){
+            text-align: center;
+
+            margin: 0 auto 22px auto;
+          }
+
+          &>*{
+            @include h4;
+            width: 100%;
+          }
+
+          position: relative;
+          &::after{
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            transform: translateY(-50%);
+            background-color: map-get($color, main);
+          }
+
+
+        }
+
+        &__list{
+          list-style-type: none;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          margin: -12px calc(-54px / 2) 0;
+
+          @include rp(mx){
+            justify-content: center;
+
+          }
+
+          li{
+            height: 56px;
+            margin: 12px calc(54px / 2) 0;
+
+            a{
+              display: block;
+            }
+
+            img{
+              width: auto;
+              object-fit: contain;
+            }
+          }
+          // li + li{
+          //   margin-left: 54px;
+          // }
+        }
+      }
+
+      &-item:not(:first-child){
+        margin-top: 48px;
+      }
+    }
+  }
+}

@@ -1,0 +1,253 @@
+		// $default: calc(14px + (16 - 14) * ((100vw - 400px) / (1600 - 400)));
+$family: (
+	primary: 'Montserrat',
+);
+
+$color: (
+	main: #19C579,
+	bg: #FFF,
+
+
+	sub1: #066543,
+
+
+	text1: #212121,
+	text2: #757575,
+	text3: #9E9E9E,
+	text4: #FFF,
+
+	text4ov: rgba(#fff, .7),
+
+	line1: #066543,
+	line2: #FFF,
+	dot: #212121,
+	dot2: #FFF,
+	border1: #19C579,
+	border2: #066543,
+);
+
+$shadow:(
+	s1: 0 3px 6px rgba(0,0,0,.16),
+);
+
+$ovlGradient: (
+
+);
+
+// dùng rem (1 rem = 10px)
+// Cách sử dụng: @include size(s12); --> sử dụng biến s12
+// ----> tương đương với font-size: 1.2rem;
+// 1920 -> 10px -> 1 rem = 10px
+
+$size: (
+	body1: (
+		default: 1.8rem
+	),
+	body2: (
+		default: 15px
+	),
+	sub2: (
+		default: 14px
+	),
+	button1: (
+		default: 1.7rem,
+	)
+);
+
+$title: (
+	h1:(
+		default: 4.8rem,
+		tx: 4rem,
+		mx: 3.8rem
+	),
+	h2: (
+		default: 3.4rem,
+		tx: 3.2rem,
+		mx: 3rem
+	),
+	h3: (
+		default: 2.8rem,
+		tx: 2.7rem,
+		mx: 2.6rem
+	),
+	h4: (
+		default: 2.2rem,
+		tx: 2.1rem,
+	),
+	h5: (
+		default: 1.8rem,
+	),
+);
+
+$lineHeight:(
+	h1: (
+		default: 5.2rem,
+	),
+	h2: (
+		default: 4.1rem,
+	),
+	h3: (
+		default: 3.8rem,
+	),
+	h4: (
+		default: 3.2rem,
+	),
+	h5: (
+		default: 2.6rem,
+	),
+
+	body1: (
+		default: 2.4rem,
+	),
+	body2: (
+		default: 2.2rem,
+	),
+	sub2: (
+		default: 2.4rem,
+	),
+
+	button1:(
+		default: auto
+	),
+);
+
+// Cách sử dụng: map-get($media, ps);
+// Hoặc là: @include rp(ps);
+$media: (
+	// personal computer
+	// px: 1920px,
+	// pl: 1680px,
+	// pm: 1440px,
+	ps: 1336px,
+	// tablet
+	tx: 1280px,
+	tl: 1024px,
+	tm: 900px,
+	ts: 768px,
+	// mobile
+	mx: 640px,
+	ml: 540px,
+	mm: 480px,
+	ms: 384px,
+	// mobile small
+	sx: 360px,
+	sl: 320px
+);
+// $media: (
+// 	// personal computer
+// 	px: 1920px,
+// 	pl: 1680px,
+// 	pm: 1440px,
+// 	ps: 1336px,
+// 	// tablet
+// 	tx: 1280px,
+// 	tl: 1024px,
+// 	tm: 900px,
+// 	ts: 768px,
+// 	// mobile
+// 	mx: 640px,
+// 	ml: 540px,
+// 	mm: 480px,
+// 	ms: 384px,
+// 	// mobile small
+// 	sx: 360px,
+// 	sl: 320px
+// );
+
+// Cách sử dụng: Không tùy chỉnh trong đây (phần này mặc định)
+// kích thước 1183px (grid layout)
+$container-max-widths: (
+	default: 1183px,
+	tx: 860px,
+	tm: 94%,
+	// pm: 1200px,
+	// tx: 960px,
+	// tl: 96%,
+	// về talet thì sẽ width = 96%;
+);
+
+// kích thước 1256px (grid layout)
+// $container-max-widths: (
+// 	default: 1256px,
+// 	ps: 960px,
+// 	tl: 96%,
+// 	// pm: 1200px,
+// 	// tx: 960px,
+// 	// tl: 96%,
+// 	// về talet thì sẽ width = 96%;
+// );
+
+// Cách sử dụng: @include block(banner, margin, 20px); --> sử dụng biến s12
+// tham số 1: tên key trong block
+// tham số 2: thuộc tính cần gán
+// tham số 3: (có thể bỏ qua) còn nếu có thì sẽ là
+//				giá trị trái phải như của margin or padding
+// ----> tương đương với margin: 1080px 20px;
+$block: (
+	pagiSwiper: (
+		default: 43px,
+	),
+
+	swiperBtn: (
+		default: 42px,
+		ts: 36px,
+		ml: 32px,
+	),
+	
+);
+
+// Cách sử dụng: @include space(s134, margin, 20px); --> sử dụng biến s12
+// tham số 1: tên key trong block
+// tham số 2: thuộc tính cần gán
+// tham số 3: (có thể bỏ qua) còn nếu có thì sẽ là
+//				giá trị trái phải như của margin or padding
+// ----> tương đương với margin: 1080px 20px;
+// y như block
+// chú ý khi khoảng cách giống nhau nhưng media khác nhau thì có thể thêm đằng sau là -2 -3 (loại 2 loại 3)
+
+$space: (
+	// reika team
+
+
+
+	// design team
+	// // Khoảng cách ngoài của section
+	// s80: (
+	// 	default: 80px,
+	// 	pm: 64px,
+	// 	tl: 56px,
+	// 	mx: 40px,
+	// 	mm: 32px,
+	// ),
+
+	// // đa số khoảng cách dùng từ title đến content
+	// s40: (
+	// 	default: 40px,
+	// 	pm: 36px,
+	// 	tl: 32px,
+	// 	mx: 28px,
+	// 	mm: 24px
+	// ),
+	// s20: (
+	// 	default: 20px,
+	// ),
+	// s16: (
+	// 	default: 16px,
+	// ),
+
+	// swiperSp: (
+	// 	default: 8px,
+	// ),
+	// swiperBtn:(
+	// 	default: 50px,
+	// )
+);
+
+
+
+
+///////////////////// LAYOUT ////////////////////////////
+
+
+///////////////////// PAGE ////////////////////////////
+@import "../_variables/index";
