@@ -1,0 +1,100 @@
+.card-info{
+  height: 100%;
+
+  background-color: map-get($color, bg1);
+  padding: 18px;
+  border-radius: 40px 0 40px 0;
+
+  &--wrapper{
+    height: 100%;
+
+    background-color: map-get($color, bg);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 30px 0 30px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+  }
+
+  &__title,
+  &__desc{
+    padding: 0 48px;
+    
+  }
+  
+  &__title{
+    margin-top: 27px;
+    text-align: center;
+    &>*{
+      @include regular;
+      @include title(sub);
+      color: map-get($color, text2);
+
+      transition: .16s color ease-in-out;
+    }
+  }
+
+  &__desc{
+    margin-top: 20px;
+    flex: 1;
+    &>*{
+      @include title(body);
+      color: map-get($color, text2);
+
+      transition: .16s color ease-in-out;
+    }
+  }
+  
+  &__btn{
+    margin-top: 20px;
+
+    justify-self: flex-end;
+    border-radius: 30px 0 30px 0;
+    overflow: hidden;
+
+    .btn{
+      // height: 66px;
+      padding: 24px 48px;
+      background-color: map-get($color, sub1);
+      text-align: center;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      transition: .16s color ease-in-out;
+      &>*{
+        color: map-get($color, text4);
+        font-family: inherit;
+        @include regular;
+
+        @include title(note);
+        white-space: nowrap;
+
+        transition: .16s color ease-in-out;
+      }
+    }
+
+    &:hover{
+      .btn{
+        background-color: map-get($color, main);
+        &>*{
+          color: map-get($color, text4);
+        }
+      }
+    }
+  }
+
+  &:hover{
+    .card-info{
+      &__title,
+      &__desc{
+        &>*{
+          color: #066543;
+        }
+      }
+    }
+  }
+}

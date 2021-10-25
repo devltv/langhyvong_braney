@@ -2,9 +2,13 @@ section#village-1
   .village1
     .container 
       .village1-title 
-      .village1-wrapper.table-column-2
-        .village1-wrapper__item 
-          include ../_components/card-info.pug
-        .village1-wrapper__item 
-          include ../_components/card-info.pug
+      .village1-wrapper.table-row.table-column-2.between
+        - let arrayVillage = [["Làng Hi Vọng", `Nép mình một góc nhỏ bên thành phố Đà Nẵng đầy tình người, Làng Hy Vọng là tên thường gọi của Trung tâm Nuôi dạy trẻ em khó khăn thành phố Đà Nẵng, trực thuộc Sở Lao động Thương binh và Xã hội thành phố Đà Nẵng, thành lập vào năm 1993. Làng do Tổ chức Đông Tây Hội Ngộ và Hội Phụ nữ Dân chủ Nhật Bản tài trợ (từ năm 2008 còn được sự tài trợ của Công ty Unilever Việt Nam), nuôi dạy trẻ em mồ côi có`,"./valliage-details.html"],["Ban điều hành", `Gắn bó với Làng Hy Vọng và các con tại đây lâu nhất không thể không kể đến hình ảnh của một người thầy đã tận tâm suốt bao nhiêu năm với Làng.Từ năm 2012, thầy Phan Thanh Vinh được UBND thành phố Đà Nẵng biệt phái làm Giám đốc Trung tâm Nuôi dạy trẻ em khó khăn. Đến nay thời hạn biệt phái đã hết, đúng ra thầy sẽ quay trở lại Sở Lao động Thương binh và xã hội thành phố để làm việc, nhưng sau thời`,"./valliage-details.html"]]
+        each val in arrayVillage
+          - let title = val[0];
+          - let desc = val[1];
+          - let link = val[2];
+          .village1-wrapper__item 
+            include ../_layout/card-info.pug
+
       
