@@ -36,6 +36,7 @@ function layout(){
 // function Page
 function page(){
   // ----- add page in here ----- //
+  // index();
 }
 
 
