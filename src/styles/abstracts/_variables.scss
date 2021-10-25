@@ -185,44 +185,15 @@ $block: (
 // chú ý khi khoảng cách giống nhau nhưng media khác nhau thì có thể thêm đằng sau là -2 -3 (loại 2 loại 3)
 
 $space: (
-	// reika team
-
-
-
-	// design team
-	// // Khoảng cách ngoài của section
-	// s80: (
-	// 	default: 80px,
-	// 	pm: 64px,
-	// 	tl: 56px,
-	// 	mx: 40px,
-	// 	mm: 32px,
-	// ),
-
-	// // đa số khoảng cách dùng từ title đến content
-	// s40: (
-	// 	default: 40px,
-	// 	pm: 36px,
-	// 	tl: 32px,
-	// 	mx: 28px,
-	// 	mm: 24px
-	// ),
-	// s20: (
-	// 	default: 20px,
-	// ),
-	// s16: (
-	// 	default: 16px,
-	// ),
-
-	// swiperSp: (
-	// 	default: 8px,
-	// ),
-	// swiperBtn:(
-	// 	default: 50px,
-	// )
+	s60: (
+		default: 6em,
+	),
 );
 
+// khoảng cách các section
+$section: (
 
+);
 
 
 ///////////////////// LAYOUT ////////////////////////////
