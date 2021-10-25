@@ -1,37 +1,51 @@
-.posts{
-  // background-color: white;
-  &.posts--og{
-    background-color: map-get($color, o2);
+.index-1 {
+  @include space(s70, margin-top);
+  &__content{
+    @include spaceIndex(s50, padding-left);
+    @include spaceIndex(s50, padding-right);
+    box-shadow: 0 3px 6px rgba(0,0,0,.16);
+    border-radius: 30px;
+    position: relative;
   }
-  &-content{
-    margin-top: 28px;
-
-    width: calc(83.3333% - 8px);
-
-    @include rp(tx){
-      width: 100%;
+  &__title{
+    @include spaceIndex(s80,padding-top);
+    text-align: center;
+    position: relative;
+    &::after{
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 2px;
+      background: map-get($color , line1 );
     }
-
-    &__title{
-      &>*{
-        color: #1D1D1B;
-        @include h2;
-      }
+    &::before{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 100px;
+      background: map-get($color , line1 );
     }
-
-    &__desc{
-      &>*{
-        @include body1;
-        color: map-get($color, pg);
-      }
-      margin-top: 28px;
+    &>*{
+      @include title(small);
+      color: map-get($color , text1);
+      line-height: 1.2;
     }
-    padding-bottom: 16px;
   }
-  &-list{
-    margin-top: calc(54px - 16px);
-    // @include rp(mx){
-    //   margin-top: calc(32px - 16px);
-    // }
+  &__desc{   
+    
+    @include spaceIndex(s36,margin-top);
+    @include spaceIndex(s80,padding-bottom);
+   
+    &>*{
+      text-align: center;
+      @include size(body1);
+      color: map-get($color , text2);
+      line-height: 1.2;
+    }
   }
 }
