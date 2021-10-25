@@ -184,6 +184,9 @@ $block: (
 // chú ý khi khoảng cách giống nhau nhưng media khác nhau thì có thể thêm đằng sau là -2 -3 (loại 2 loại 3)
 
 $space: (
+	s70:(
+		default: 60px,
+	),
 	s60: (
 		default: 6em,
 	),

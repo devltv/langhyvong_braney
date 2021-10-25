@@ -1,0 +1,36 @@
+$spaceIndex:(
+    s36: (
+        default: 36px,
+    ),
+    s50: (
+        default: 50px,
+    ),
+    s80:(
+        default: 80px,
+        
+    ),
+    
+);
+
+
+@mixin spaceIndex($key, $name, $side: "-1") {
+    @each $idx, $val in map-get($spaceIndex, #{$key}) {
+      @if $side == "-1" {
+        @if $idx == default {
+          #{$name}: $val;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val;
+          }
+        }
+      } @else {
+        @if $idx == default {
+          #{$name}: $val $side;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val $side;
+          }
+        }
+      }
+    }
+  }
