@@ -1,0 +1,79 @@
+#story-1{
+    .story-1--wrapper{
+        margin: 70px 0;
+        @include rp(ts){
+            margin: 30px 0;
+        }
+        &__title{
+
+        }
+        &__content{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 100%;
+            margin: 0 -8px;
+            &-img{
+                height: 100%;
+                padding: 0 8px;
+                display: flex;
+                flex-wrap: wrap;
+                @include rp(tm){
+                    height: auto;
+                }
+                @include rp(tm){
+                    margin-bottom: 25px;
+                }
+                &_big{
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                &_small{
+                    width: 100%;
+                    &-wrapper{
+                        height: 100%;
+                        margin: 0 -8px;
+                        display: flex;
+                        // align-items: center;
+                        justify-content: space-between;
+                        flex-wrap: wrap;
+                        [class*="column-"] {
+                            padding: 0 8px;
+                        }
+                    }
+                   
+                    
+                }
+            }
+            &-decs{
+                height: 100%;
+                // box-shadow: ;
+                padding: 0 8px;
+                @include rp(tm){
+                    height: auto;
+                }
+                &_infor{
+                    @include shadow(s1);
+                    border-radius:  30px 0 30px 0;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 0 67px ;
+                    &>*:not(:last-child){
+                        margin-bottom: 10px;
+                    }
+                    @include rp(tm){
+                        height: auto;
+                        padding: 47px ;
+                    }
+                    @include rp(mm){
+                        padding: 37px ;
+                    }
+                }
+               
+            }
+        }
+    }
+}
