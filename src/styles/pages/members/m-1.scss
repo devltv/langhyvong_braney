@@ -1,41 +1,38 @@
 #members1 {
-    // padding-top: map-get($space, s70 ,padding);
-    
-    // padding: 70px 0;
-    .members1{
-        &--title{
-            width: 100%;
-            text-align: center;
-            @include space(s70 , margin,0);
-        }
-        &--wrapper{
-            // @include space(s70 , margin-bottom);
-            width: 100%;
-            .myStudent-thumb,
-            .myStudent{
-                .swiper-slide{
-                    height: unset;
-                    cursor: pointer;
-                }
-            }
-            .myStudent{
-                border: solid 1px map-get($color, text3 );
-                &__slide{
-                    width: 100%;
-                    padding-bottom: 66.6667%;
-                    position: relative;
-                    img{
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        left: 0;
-                        right: 0;
-                        object-fit: contain;
-                    }
-                }
-            }
-           
-        }
-
+  // padding-top: map-get($space, s70 );
+  // padding: 70px 0;
+  @include section(s70, margin-top);
+  .members1 {
+    &__title {
+      width: 100%;
+      text-align: center;
     }
+    &--wrapper {
+      @include section(s70, margin-top);
+      width: 100%;
+      .myStudent-thumb,
+      .myStudent {
+        .swiper-slide {
+          height: unset;
+          cursor: pointer;
+        }
+      }
+      .myStudent {
+        border: solid 1px map-get($color, text3);
+        &__slide {
+          width: 100%;
+          padding-bottom: 66.6667%;
+          position: relative;
+          img {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            object-fit: contain;
+          }
+        }
+      }
+    }
+  }
 }
