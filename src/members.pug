@@ -1,0 +1,12 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Members';
+	- let bodyClass = 'members-page';
+
+block main
+	div(id="membersPage")
+		include _templates/members/m-1
+		include _templates/members/m-2
+
+block scripts

@@ -1,0 +1,46 @@
+.card-members{
+  height: 100%;
+
+  background-color: white;
+  box-shadow: map-get($shadow, s1);
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  &__img{
+    padding: 18px 14px;
+    position: relative;
+    img{
+      position: relative;
+      z-index: 3;
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: map-get($color, sub1);
+      z-index: 1;
+    }
+    
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: map-get($color, main);
+      z-index: 2;
+    }
+  }
+
+  &-content{
+    &__desc{
+      @include p-line-clamp(6);
+    }
+  }
+}
