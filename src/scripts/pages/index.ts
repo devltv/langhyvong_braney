@@ -1,5 +1,5 @@
 function Hoavan(){
-  if(document.getElementById('index-1')){
+  // if(document.getElementById('index-1')){
     
     var svg = `
     <div class= "hoavan-line-1">
@@ -28,7 +28,7 @@ function Hoavan(){
       item.innerHTML += cre.innerHTML;
     })
     
-  }
+  // }
 }
 
 

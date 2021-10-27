@@ -48,31 +48,31 @@
         @include rp(mx){
           padding:25px ;
         }
-      &::after{
-        position: absolute;
-        top: 0;
-        right: 0;
-        content: "";
-        background-image: url("../assets/layout/Group 25.png");
-        width: 18%;
-        height: 80%;
-        background-size: 100%;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      &::before{
-        transform: rotate(180deg);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: "";
-        background-image: url("../assets/layout/Group 25.png");
-        width: 18%;
-        height: 80%;
-        background-size: 100%;
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
+      // &::after{
+      //   position: absolute;
+      //   top: 0;
+      //   right: 0;
+      //   content: "";
+      //   background-image: url("../assets/layout/Group 25.png");
+      //   width: 18%;
+      //   height: 80%;
+      //   background-size: 100%;
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
+      // &::before{
+      //   transform: rotate(180deg);
+      //   position: absolute;
+      //   bottom: 0;
+      //   left: 0;
+      //   content: "";
+      //   background-image: url("../assets/layout/Group 25.png");
+      //   width: 18%;
+      //   height: 80%;
+      //   background-size: 100%;
+      //   background-size: contain;
+      //   background-repeat: no-repeat;
+      // }
      }
     }
   }

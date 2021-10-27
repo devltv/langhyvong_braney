@@ -1,6 +1,10 @@
 section#members1 
   .members1
     .container
+      .members1--title
+        each tit in ['1']
+          - let title = "Học Sinh";
+          include ../_layout/title.pug
       .members1--wrapper
         .swiper-container.myStudent
           .swiper-wrapper
