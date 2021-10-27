@@ -1,16 +1,20 @@
 $spaceIndex:(
     s36: (
         default: 36px,
+        pm: 34px,
         tx: 32px,
+        mx: 24px,
     ),
     s50: (
         default: 50px,
+        mx: 40px,
+        ml: 30px,
     ),
     s80:(
         default: 80px,
         pm: 70px, 
         tx: 60px,
-        ts: 50px,
+        mx: 40px,
         
     ),
     
@@ -27,6 +31,7 @@ $spaceIndex2:(
         default: 70px,
         pm: 50px,
         tx: 35px,
+
         
         
     ),
@@ -36,27 +41,37 @@ $spaceIndex2:(
 $spaceIndex3:(
     s18:(
       default: 18px,
+      ts: 10px,
     ),
     s32: (
         default: 32px,
+        tx: 24px,
+        ts: 20px,
        
     ),
    
     s70:(
         default: 70px,
         pm: 50px,
-        tx: 35px,
+
+        
         
         
     ),
     s80:(
         default: 80px,
+        pm: 50px,
+
         
         
     ),
    
     s100:(
         default: 100px,
+        tx: 80px,
+        ts: 60px,
+        mx: 20px,
+
         
         
         

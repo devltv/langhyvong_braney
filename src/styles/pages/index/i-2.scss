@@ -1,6 +1,6 @@
 .index-2{
-    @include space(s70, padding-top);
-    @include space(s70, padding-bottom);
+    @include section(s72, padding-top);
+    @include section(s72, padding-bottom);
     background: map-get($color , bg-2);
     &__wrapper{
         width: 100%;
@@ -16,6 +16,20 @@
             flex: 33.3%;
             flex-direction: column;
             align-items: center;
+            @include rp(tl){
+                margin-top: 16px;
+                svg{
+                    width: 230px;
+                    height: 230px;
+                }
+            }
+            @include rp(tl){
+                margin-top: 16px;
+                svg{
+                    width: 200px;
+                    height: 200px;
+                }
+            }
             &__desc{
                 @include spaceIndex2(s32,margin-top);
                 &>*{

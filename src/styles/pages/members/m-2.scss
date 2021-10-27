@@ -1,4 +1,23 @@
 .members2{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 86px;
+    left: 0;
+    right: 0;
+    bottom: 86px;
+    background-color: map-get($color, main);
+    opacity: .37;
+    z-index: -1;
+  }
+  &__title{
+    @include spaceIndex(s80, margin-top);
+    @include spaceIndex(s80, margin-bottom);
+
+    text-align: center;
+    width: 100%;
+  }
   &-wrapper{
     &__item{
       padding-bottom: 6px;
