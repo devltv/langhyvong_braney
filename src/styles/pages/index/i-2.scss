@@ -17,14 +17,14 @@
             flex-direction: column;
             align-items: center;
             @include rp(tl){
-                margin-top: 8px;
+                margin-top: 16px;
                 svg{
                     width: 230px;
                     height: 230px;
                 }
             }
             @include rp(tl){
-                margin-top: 8px;
+                margin-top: 16px;
                 svg{
                     width: 200px;
                     height: 200px;

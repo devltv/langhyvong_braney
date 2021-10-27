@@ -8,7 +8,8 @@
       left: 50%;
       transform: translateX(-50%);
       width: 40%;
-      height: 2px;
+      content: "";
+      height: 1px;
       background: map-get($color , line1 );
     }
     &::before{
@@ -19,6 +20,7 @@
       width: 10px;
       height: 10px;
       border-radius: 100px;
+      content: "";
       background: map-get($color , line1 );
     }
     &>*{
