@@ -13,16 +13,16 @@
       // // height: 100%;
       // // object-position: bottom;
       // //  
-      svg{
-        @include rp(tm){
-          width: 120px;
-          height: 150px;
-        }
-        @include rp(mx){
-          width: 100px;
-          height: 125px;
-        }
-      }
+      // svg{
+      //   @include rp(tm){
+      //     width: 120px;
+      //     height: 150px;
+      //   }
+      //   @include rp(mx){
+      //     width: 100px;
+      //     height: 125px;
+      //   }
+      // }
     }
     .hoavan-line-2{
       // position: absolute;
@@ -31,16 +31,16 @@
       // // width: 50%;
       // // height: 50%;
       // object-position: right;
-      svg{
-        @include rp(tm){
-          width: 70px;
-          height: 75px;
-        }
-        @include rp(mx){
-          width: 60px;
-          height: 65px;
-        }
-      }
+      // svg{
+      //   @include rp(tm){
+      //     width: 70px;
+      //     height: 75px;
+      //   }
+      //   @include rp(mx){
+      //     width: 60px;
+      //     height: 65px;
+      //   }
+      // }
     }
   }
   &__title{

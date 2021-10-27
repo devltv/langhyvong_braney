@@ -30,17 +30,17 @@
                 // // height: 100%;
                 // // object-position: bottom;
                 // //  
-                // transform: rotate(180deg);
-                svg{
-                    @include rp(tm){
-                      width: 68px;
-                      height: 75px;
-                    }
-                    @include rp(mx){
-                      width: 58px;
-                      height: 65px;
-                    }
-                  }
+                // // transform: rotate(180deg);
+                // svg{
+                //     @include rp(tm){
+                //       width: 68px;
+                //       height: 75px;
+                //     }
+                //     @include rp(mx){
+                //       width: 58px;
+                //       height: 65px;
+                //     }
+                //   }
                 // circle{
                 //     fill: #fff;
                 // }
@@ -56,18 +56,18 @@
                 // // height: 50%;
                 // object-position: right;
                 // transform: rotate(180deg);
-                svg{
-                    width: 151px;
-                    height: 190px;
-                    @include rp(tm){
-                        width: 120px;
-                        height: 150px;
-                    }
-                    @include rp(mx){
-                        width: 100px;
-                        height: 125px;
-                    }
-                }
+                // svg{
+                //     width: 151px;
+                //     height: 190px;
+                //     @include rp(tm){
+                //         width: 120px;
+                //         height: 150px;
+                //     }
+                //     @include rp(mx){
+                //         width: 100px;
+                //         height: 125px;
+                //     }
+                // }
                 // circle{
                 //     fill: #fff;
                 // }
