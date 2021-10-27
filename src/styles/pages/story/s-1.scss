@@ -1,11 +1,15 @@
 #story-1{
     .story-1--wrapper{
-        margin: 70px 0;
+        // margin: 70px 0;
+        @include section(s70, margin-top);
+        @include section(s70, margin-bottom);
+
         @include rp(ts){
             margin: 30px 0;
         }
         &__title{
-
+            width: 100%;
+            text-align: center;
         }
         &__content{
             display: flex;
