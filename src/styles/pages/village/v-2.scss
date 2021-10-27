@@ -1,7 +1,14 @@
 .village2{
-  @include section(s72, margin-top);
+  @include section(s70, margin-top);
   
+  &__title {
+    width: 100%;
+    text-align: center;
+  }
+
   &-wrapper{
+    @include section(s70, margin-top);
+
     &__item{
       padding-bottom: 6px;
     }

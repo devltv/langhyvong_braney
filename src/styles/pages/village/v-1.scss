@@ -1,5 +1,12 @@
 .village1{
-  &-wrapper{
+  @include section(s70, margin-top);
+
+  &__title {
     width: 100%;
+    text-align: center;
+  }
+
+  &-wrapper{
+    @include section(s70, margin-top);
   }
 }
