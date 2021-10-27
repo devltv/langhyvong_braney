@@ -20,6 +20,7 @@ import * as fetchData from "./components/fetchData";
 // Layout
 
 // Page
+import {village} from "./pages/village";
 
 // import { interpolate } from "gsap/all";
 
@@ -30,13 +31,13 @@ function common(){
 }
 
 function layout(){
-
 }
 
 // function Page
 function page(){
   // ----- add page in here ----- //
   // index();
+  village();
 }
 
 

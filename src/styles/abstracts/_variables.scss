@@ -187,14 +187,15 @@ $space: (
 	s70:(
 		default: 60px,
 	),
-	s60: (
-		default: 6em,
-	),
 );
 
 // khoảng cách các section
 $section: (
-
+	s72: (
+		default: 70px,
+		tx: 64px,
+		mx: 58px
+	)
 );
 
 
