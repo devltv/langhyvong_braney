@@ -1,0 +1,29 @@
+.title{
+    @include spaceIndex(s80,padding-top);
+    text-align: center;
+    position: relative;
+    &::after{
+      position: absolute;
+      top: calc(100% + 5px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 40%;
+      height: 2px;
+      background: map-get($color , line1 );
+    }
+    &::before{
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 100px;
+      background: map-get($color , line1 );
+    }
+    &>*{
+      @include title(small);
+      color: map-get($color , text1);
+      line-height: 1.2;
+    }
+  }
