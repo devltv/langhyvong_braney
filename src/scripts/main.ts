@@ -20,6 +20,7 @@ import * as fetchData from "./components/fetchData";
 // Layout
 
 // Page
+import {story} from "./pages/story"
 
 // import { interpolate } from "gsap/all";
 
@@ -37,6 +38,7 @@ function layout(){
 function page(){
   // ----- add page in here ----- //
   // index();
+  story();
 }
 
 

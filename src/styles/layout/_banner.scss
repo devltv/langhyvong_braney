@@ -4,6 +4,7 @@
   width: 100%;
   position: relative;
   overflow: hidden;
+  transition: .3s ease-in-out;
   &.bannerSub{
     @include rp(tl){
       height: 200px;
