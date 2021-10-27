@@ -18,12 +18,12 @@
             align-items: center;
             @include rp(tl){
                 margin-top: 16px;
-                svg{
-                    width: 230px;
-                    height: 230px;
-                }
+                // svg{
+                //     width: 230px;
+                //     height: 230px;
+                // }
             }
-            @include rp(tl){
+            @include rp(mx){
                 margin-top: 16px;
                 svg{
                     width: 200px;
