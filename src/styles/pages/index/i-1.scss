@@ -1,6 +1,7 @@
 .index-1 {
-  @include section(s72, margin-top);
-  @include section(s72, margin-bottom);
+  @include section(s70, margin-top);
+  @include section(s70, margin-bottom);
+
   background: map-get($color , bg );
   &__wrapper{
     position: relative;
