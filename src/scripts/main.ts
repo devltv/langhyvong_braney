@@ -23,6 +23,7 @@ import * as fetchData from "./components/fetchData";
 import {index} from "./pages/index";
 import {village} from "./pages/village";
 import {story} from "./pages/story"
+import {student} from "./pages/student"
 
 // import { interpolate } from "gsap/all";
 
@@ -41,7 +42,7 @@ function page(){
   index();
   // index();
   village();
-
+  student();
 
   story();
 }
