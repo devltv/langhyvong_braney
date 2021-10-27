@@ -20,7 +20,7 @@
     }
     .banner-section{
      
-      
+      // position: relative;
       top: 75%;
       left: 50%;
       transform: translate(-50%,0);
@@ -32,6 +32,14 @@
       }
       @include rp(mx){
         top: 60%;
+      }
+      .overlay__bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
       }
      &__title{
         padding: 40px 115px;
