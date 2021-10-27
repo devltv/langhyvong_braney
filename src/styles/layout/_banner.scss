@@ -1,204 +1,218 @@
-#banner{
+
+.banner{
+  height: 100vh;
+  width: 100%;
   position: relative;
-  .banner-img__overlay{
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    z-index: 2;
-    &>img{
-      display: block;
-    }
-  }
-  .swiper-container{
-    .swiper-pagination{
-      bottom: 9%;
-
-      &-bullet{
-        background: url('../assets/icons/pagination.svg') no-repeat;
-        background-size: contain;
-
-        width: 10px;
-        height: 14px;
-
-        opacity: 1;
-
-        &.swiper-pagination-bullet-active{
-          background: url('../assets/icons/paginationActive.svg') no-repeat;
-          background-size: contain;
-        }
-      }
-    }
-    .swiper-slide{
-      // opacity: 0.8;
-      // transition: opcity 0.3s ease-in-out;
-      
-      &.swiper-slide-active{
-       
-
-      }
-      
-     
+  overflow: hidden;
+  &.bannerSub{
+    @include rp(tl){
+      height: 200px;
+      min-height: 450px;
     }
     
-    &>.container{
-      position: absolute;
-      top: auto;
-      right: auto;
-      bottom: 12%;
+    // background-color: black;
+    .banner-img::after{
+      
+      content: none;
+     
+    }
+    .banner-section{
+      @include rp(tl){
+        top: 50%;
+      }
+      top: 75%;
       left: 50%;
-      transform: translateX(-50%);
-      height: 50px;
-      z-index: 6;
-
-      .swiper-button-prev{
-        display: none;
-      }
-
-      .swiper-button-next{
-        left: 0;
-        right: auto;
-
-        background: url('../assets/icons/nextSlide.png') no-repeat;
+      transform: translate(-50%,0);
+      text-align: center;
+      justify-content: center;
+      transition: .4s ease-in-out;
+     &__title{
+        padding: 40px 115px;
+        border-radius: 30px 0 30px 0;
+        background-color: rgba( map-get($color, sub1 ), $alpha: .8);
+        @include title(big);
+        color: white;
+        position: relative;
+        // white-space: nowrap;
+        min-width: 250px;
+        @include rp(tl){
+          padding: 40px  50px;
+        }
+        @include rp(mx){
+          padding:30px ;
+        }
+      &::after{
+        position: absolute;
+        top: 0;
+        right: 0;
+        content: "";
+        background-image: url("../assets/layout/Group 25.png");
+        width: 18%;
+        height: 80%;
+        background-size: 100%;
         background-size: contain;
-
-        width: 35px;
-        height: 48px;
-
-        &:hover{
-          opacity: .9;
-        }
-
-        &::after{
-          content: "";
-        }
+        background-repeat: no-repeat;
       }
+      &::before{
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        background-image: url("../assets/layout/Group 25.png");
+        width: 18%;
+        height: 80%;
+        background-size: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+     }
     }
   }
-}
-
-.banner{
-  padding-top: 100vh;
-  @include rp(ps){
-    padding-top: 52%;
-  }
-  @include rp(tx){
-    padding-top: 70%;
-  }
-  @include rp(mx){
-    padding-top: 592px;
-  }
-  animation: banner 4s ease-in-out forwards;
-  // animation-delay: 1s;
-  &.bannersub{
-    padding-top: 35%;
-    @include rp(tm){
-      padding-top: 40%;
+  .banner-img{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    &::after{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      background : rgba(map-get($color,sub1 ), .74 ) ;
     }
-    @include rp(mx){
-      padding-top: 296px;
-    }
-    // animation: banner 1s ease-in-out forwards;
-    // .banner-img{
-    //   &>img{
-    //     filter: brightness(90%);
-    //   }
-    // }
-  }
-}
+    img{
 
-.banner{
-  position: relative;
-  &-img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 1px;
-    right: 0;
-
-    // clip-path: ellipse(100% 74% at 30% 25%);
-    background-color: rgba(#fff,.35);
-
-    &>img{
-      filter: brightness(75%);
-    }
-
-    video{
-      width: 100%;
-      height: 100%;
-      object-position: center;
       object-fit: cover;
     }
-
-    &__overlay{
-      // clip-path: ellipse(100% 74% at 30% 25%);
-
-      position: absolute;
-      width: 100%;
-      bottom: -1px;
-      right: 0;
-      padding-bottom: 11.7%;
-      // top: 0;
-      // width: 100%;
-      // padding-bottom: 20%;
-      // min-width: 30%;
-      img{
-        position: absolute;
-
-        left: 0;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        // object-fit: contain;
-
-      }
-    }
   }
-
-  &>.container{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 100%;
-  }
-
-  &-content{
+  .banner-section{
     position: absolute;
     top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-    width: 42%;
-    @include rp(tx){
-      width: 360px;
-    }
-    @include rp(mx){
-      width: 260px;
-    }
-    &__title{
-      &>*{
-        @include h1;
-        color: white;
-
-
-        @include rp(mx){
-          @include h2;
-        }
+    left: 50%;
+    transform: translate(-50%,-50%);
+    height: auto;
+    // overflow: hidden;
+    .wrapper{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 0 -8px;
+      align-items: center;
+      @include rp(tl){
+        justify-content: center;
       }
     }
-    &__desc{
-      margin-top: 30px;
-      &>*{
-        @include h4;
-        color: white;
-
-        @include rp(mx){
-          @include h5;
+    &__img{
+      padding: 0 8px;
+      position: relative;
+      min-width: 230px;
+      @include rp(tl){
+        margin-bottom: 30px;
+      }
+      &::after{
+        position: absolute;
+        top: 0;
+        left: 0;
+        // transform: translate(-50%,-50%);
+        width: 100%;
+        height: 100%;
+        content: "";
+        background-color: map-get($color,main );
+        border-radius: 50%;
+        animation: flow  5s infinite linear;
+        z-index: -1;
+        @keyframes flow {
+          0%{
+            transform:rotate(0deg)
+                      translate(-15px)
+                      // translateY(50%)
+                      rotate(0deg);
+          }
+          100%{
+            transform:rotate(360deg)
+                        translate(-15px)
+                      //  translateY(50%)
+                      rotate(-360deg);
+          }
         }
       }
+      // z-index: 2;
+      .img{
+        width: 100%;
+        padding-top: 100%;
+        // background-color: black;
+        border-radius: 50%;
+        background: transparent;
+        overflow: hidden;
+        position: relative;
+        img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          z-index: 1;
+        }
+        &::before{
+          position: absolute;
+          top: 15px;
+          left: 15px;
+          // transform: translate(-50%,-50%);
+          width: 95%;
+          height: 95%;
+          @include rp(tl){
+            width: 90%;
+            height: 90%;
+          }
+          content: "";
+          border: solid 1px white;
+          border-radius: 50%;
+          animation: flow-reversse  3s infinite linear;
+           z-index: 2;
+          @keyframes flow-reversse {
+            0%{
+              transform:rotate(0deg)
+                        translate(-7px)
+                        // translateY(50%)
+                        rotate(0deg);
+            
+            }
+            100%{
+              transform:rotate(-360deg)
+                          translate(-7px)
+                        //  translateY(50%)
+                        rotate(360deg);
+            }
+          }
+        }
+       
+      }
+     
+    }
+    &__decs{
+      margin-left: auto;
+      padding: 0 8px;
+      &--infor{
+        padding: 50px 90px 50px 50px;
+        @include rp(tl){
+          padding: 35px;
+        }
+        border-radius: 30px 0 30px 0;
+        background-color: map-get($color, sub1 );
+        &_title{
+          @include title(big);
+          @include p-line-clamp(3);
+          margin-bottom: 20px;
+          color: white
+        }
+        &_decs{
+          // @include title(big);
+          @include p-line-clamp(8);
+          color: white;
+        }
+      }
+     
     }
   }
 }
-
-// .bannersub{
-
-// }

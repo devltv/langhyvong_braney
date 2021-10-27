@@ -1,0 +1,18 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Page | Index';
+	- let bodyClass = 'index-page';
+	- let indexFooter = "indexfooter";
+	- let bannerSub = "bannerSub";
+	- let imgBanner = {};
+	- imgBanner.src = "./assets/page/story/banner.png"
+	- let pageName = "Chuyện về làng"
+
+block main
+	div(id="indexPage")
+		include _templates/story/s-1
+		include _templates/story/s-2
+		include _templates/story/s-3
+
+block scripts
