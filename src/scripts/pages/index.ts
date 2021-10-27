@@ -43,6 +43,7 @@ function handleClickButton(){
       console.log(btn);
       var hrefBtn = btn.getAttribute('href');
       window.location.assign(hrefBtn);
+      btn.classList.add()
     })
 
     item.addEventListener('mouseover', function(){

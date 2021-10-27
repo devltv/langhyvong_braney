@@ -24,8 +24,12 @@
 @import "layout/header";
 @import "layout/banner";
 @import "layout/footer";
+@import "layout/card-info.scss";
+@import "layout/card-document.scss";
 
 // page
 @import "pages/index/style";
+@import "pages/story/style";
 
+@import "pages/village/style.scss";
 

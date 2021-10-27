@@ -6,10 +6,13 @@ $family: (
 $color: (
 	main: #19C579,
 	bg: #FFF,
+<<<<<<< HEAD
 	bg-2: #94F7BC,
+=======
+>>>>>>> 523a4eedb8d891525b4691798a6b9de44516c523
 
 	sub1: #066543,
-
+	bg1: #EFEFEF,
 
 	text1: #212121,
 	text2: #757575,
@@ -188,14 +191,15 @@ $space: (
 	s70:(
 		default: 70px,
 	),
-	s60: (
-		default: 6em,
-	),
 );
 
 // khoảng cách các section
 $section: (
-
+	s72: (
+		default: 70px,
+		tx: 64px,
+		mx: 58px
+	)
 );
 
 

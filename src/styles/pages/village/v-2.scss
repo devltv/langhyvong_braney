@@ -1,0 +1,9 @@
+.village2{
+  @include section(s72, margin-top);
+  
+  &-wrapper{
+    &__item{
+      padding-bottom: 6px;
+    }
+  }
+}
