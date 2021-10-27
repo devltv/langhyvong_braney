@@ -3,7 +3,7 @@ function Hoavan(){
     
     var svg = `
     <div class= "hoavan-line-1">
-      <svg xmlns="http://www.w3.org/2000/svg" width="155.584" height="195.487" viewBox="0 0 155.584 195.487">
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 155.584 195.487">
         <g id="Group1" transform="translate(1615.329 2174) rotate(180)">
             <circle id="Ellipse_100" data-name="Ellipse 100" cx="19.451" cy="19.451" r="19.451" transform="translate(1548.377 2008.858)" fill="#066543"/>
             <path id="Intersection_6" data-name="Intersection 6" d="M167.644,149.6a257.208,257.208,0,0,1,8.49-47.264c-18.268,3.108-39.417,3.964-61.777,2.008-32.506-2.844-61.469-11.1-82.113-22.173H187.828V259.618C172.007,239.056,163.493,197.045,167.644,149.6Z" transform="translate(1427.501 1896.347)" fill="#066543"/>
@@ -12,7 +12,7 @@ function Hoavan(){
       </svg>
     </div>
     <div class= "hoavan-line-2">
-      <svg xmlns="http://www.w3.org/2000/svg" width="92" height="102" viewBox="0 0 92 102">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 92 102">
         <g id="Group_5131" data-name="Group 5131" transform="translate(-1459.745 -1978.513)">
           <circle id="Ellipse_100" data-name="Ellipse 100" cx="10.5" cy="10.5" r="10.5" transform="translate(1513.078 1994.741)" fill="#066543"/>
           <path id="Intersection_6" data-name="Intersection 6" d="M80.065,31.905a100.1,100.1,0,0,1,5.02-22.364,181.13,181.13,0,0,1-36.53.95C29.333,9.146,12.207,5.24,0,0H92V83.965C82.644,74.236,77.61,54.357,80.065,31.905Z" transform="translate(1459.745 1978.513)" fill="#066543"/>

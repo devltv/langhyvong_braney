@@ -1,0 +1,44 @@
+.hoavan{
+    &.hoavan--white{
+        circle{
+            fill: #fff;
+        }
+        path{
+            fill: #fff;
+        }
+    }
+    &.hoavan--rotate{
+        transform: rotate(180deg);
+    }
+    .hoavan-line-1{
+        height: 100%;
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        svg{
+            height: 85%;
+            margin-top: auto;
+        }
+        // width: 100%;
+        // height: 100%;
+        // object-position: bottom;
+        //  
+        
+    }
+      .hoavan-line-2{
+          height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        // width: 50%;
+        // height: 50%;
+        display: flex;
+        object-position: right;
+        svg{
+            height: 60%;
+            margin-bottom: auto;
+        }
+       
+    }  
+}
