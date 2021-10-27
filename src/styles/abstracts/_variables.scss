@@ -6,7 +6,7 @@ $family: (
 $color: (
 	main: #19C579,
 	bg: #FFF,
-
+	bg-2: #94F7BC,
 
 	sub1: #066543,
 
@@ -44,7 +44,7 @@ $size: (
 		default: 1.8rem
 	),
 	body2: (
-		default: 15px
+		default: 16px
 	),
 	sub2: (
 		default: 14px
@@ -186,7 +186,7 @@ $block: (
 
 $space: (
 	s70:(
-		default: 60px,
+		default: 70px,
 	),
 	s60: (
 		default: 6em,

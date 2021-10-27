@@ -1,20 +1,115 @@
 $spaceIndex:(
     s36: (
         default: 36px,
+        tx: 32px,
     ),
     s50: (
         default: 50px,
     ),
     s80:(
         default: 80px,
+        pm: 70px, 
+        tx: 60px,
+        ts: 50px,
         
     ),
     
 );
 
 
+$spaceIndex2:(
+    s32: (
+        default: 32px,
+       
+    ),
+   
+    s70:(
+        default: 70px,
+        pm: 50px,
+        tx: 35px,
+        
+        
+    ),
+    
+);
+
+$spaceIndex3:(
+    s18:(
+      default: 18px,
+    ),
+    s32: (
+        default: 32px,
+       
+    ),
+   
+    s70:(
+        default: 70px,
+        pm: 50px,
+        tx: 35px,
+        
+        
+    ),
+    s80:(
+        default: 80px,
+        
+        
+    ),
+   
+    s100:(
+        default: 100px,
+        
+        
+        
+    ),
+    
+    
+);
+
+
 @mixin spaceIndex($key, $name, $side: "-1") {
     @each $idx, $val in map-get($spaceIndex, #{$key}) {
+      @if $side == "-1" {
+        @if $idx == default {
+          #{$name}: $val;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val;
+          }
+        }
+      } @else {
+        @if $idx == default {
+          #{$name}: $val $side;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val $side;
+          }
+        }
+      }
+    }
+  }
+@mixin spaceIndex2($key, $name, $side: "-1") {
+    @each $idx, $val in map-get($spaceIndex2, #{$key}) {
+      @if $side == "-1" {
+        @if $idx == default {
+          #{$name}: $val;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val;
+          }
+        }
+      } @else {
+        @if $idx == default {
+          #{$name}: $val $side;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val $side;
+          }
+        }
+      }
+    }
+  }
+@mixin spaceIndex3($key, $name, $side: "-1") {
+    @each $idx, $val in map-get($spaceIndex3, #{$key}) {
       @if $side == "-1" {
         @if $idx == default {
           #{$name}: $val;

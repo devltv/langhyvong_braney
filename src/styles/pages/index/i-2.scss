@@ -1,1 +1,31 @@
+.index-2{
+    @include space(s70, padding-top);
+    @include space(s70, padding-bottom);
+    background: map-get($color , bg-2);
+    &__wrapper{
+        width: 100%;
+    }
+    .content{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        &-box{
+            @include spaceIndex2(s70,padding-left);
+            @include spaceIndex2(s70,padding-right);
+            display: flex;
+            flex: 33.3%;
+            flex-direction: column;
+            align-items: center;
+            &__desc{
+                @include spaceIndex2(s32,margin-top);
+                &>*{
+                    text-align: center;
+                    @include size(body1);
+                    color: map-get($color, text2 );
+                    
+                }
+            }
+        }
+    }
 
+}
