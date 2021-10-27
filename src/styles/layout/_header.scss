@@ -4,12 +4,39 @@ header{
   position: fixed;
   z-index: 1111;
   width: 100%;
+  overflow: visible;
   .header{
+    height: 80px;
     width: 100%;
+    // overflow: visible;
     &-list{
       display: flex;
       list-style-type: none;
       justify-content: space-between;
+      position: relative;
+      height: 100%;
+      align-items: center;
+      .logo{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: auto;
+        justify-content: center;
+        display: flex;
+        z-index: 9999;
+        &-link{
+          width: 80%;
+          display: block;
+        }
+      }
+    }
+    &-items{
+      &>*{
+        @include size(body1);
+        @include bold;
+        color: map-get($color , text5 );
+      }
     }
   }
 }
