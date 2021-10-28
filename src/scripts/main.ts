@@ -20,6 +20,7 @@ import * as fetchData from "./components/fetchData";
 // Layout
 import {_popup} from "./layout/_popup";
 
+import {banner} from "./layout/banner";
 // Page
 import {index} from "./pages/index";
 import {village} from "./pages/village";
@@ -36,6 +37,7 @@ function common(){
 
 function layout(){
   _popup();
+  banner();
 }
 
 // function Page
