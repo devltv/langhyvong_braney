@@ -1,0 +1,71 @@
+#deg360{
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 11111;
+
+  .deg360{
+    cursor: pointer;
+    min-width: 116px;
+    height: 56px;
+
+    border-radius: 30px 0 0 30px;
+    background-color: map-get($color, sub1);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .16 background ease-in-out;
+
+    padding-right: 20px;
+
+    white-space: nowrap;
+    &:hover{
+      background-color: map-get($color, main);
+    }
+  }
+}
+
+#popup360deg, #popupImg{
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: map-get($color, sub1);
+  
+  // display: none;
+
+  display: none;
+  // animation: noneDisplay 0.01s ease-in-out forwards;
+
+  &.active{
+    display: block;
+  }
+  
+  .popup360deg,
+  .popupImg{
+    width: 100%;
+    background-color: map-get($color, bg);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-container{
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      padding-top: 56.25%;
+
+      &--ratio{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

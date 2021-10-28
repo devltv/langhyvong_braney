@@ -4,11 +4,11 @@
 // https://swiperjs.com/get-started
 declare var Swiper : any;
 declare var $ : any;
-declare var AOS : any;
+// declare var AOS : any;
 
-AOS.init({
-  once: true
-});
+// AOS.init({
+//   once: true
+// });
 
 // import axios from "axios";
 
@@ -18,6 +18,8 @@ AOS.init({
 import * as fetchData from "./components/fetchData";
 
 // Layout
+import {_popup} from "./layout/_popup";
+
 import {header} from "./layout/header";
 import {banner} from "./layout/banner";
 // Page
@@ -35,6 +37,7 @@ function common(){
 }
 
 function layout(){
+  _popup();
   header();
   banner();
 }

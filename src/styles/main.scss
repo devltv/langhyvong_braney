@@ -17,15 +17,17 @@
 
 // component
 @import "components/breadcrumb";
-
 @import "components/language";
 @import "components/hoavan";
+@import "components/close";
 
 // layout
 @import "layout/header";
 @import "layout/banner";
 @import "layout/footer";
 @import "layout/title";
+@import "layout/360deg";
+@import "layout/popup";
 
 // page
 @import "pages/index/style";
