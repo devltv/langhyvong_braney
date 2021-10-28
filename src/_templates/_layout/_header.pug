@@ -1,20 +1,40 @@
-header 
+header#header
     .container 
         .header 
             ul.header-list 
-                .logo.column-2
-                    a.logo-link(href="#")
-                        img(src="./assets/layout/header/Group1.png", alt="logo")
                 li.header-items
-                    a(href="#") Làng của con
+                    a(href="./village.html") Làng của con
                 li.header-items
-                    a(href="#") Chuyện về làng
+                    a(href="./story.html") Chuyện về làng
                 li.header-items
                     a(href="#") Hằng ngày của con 
                 li.header-items.column-2
+                    .logo.column-2
+                        a.logo-link(href="./index.html")
+                            img(src="./assets/layout/header/Group1.png", alt="logo")
                 li.header-items
-                    a(href="#") Thành viên của làng
+                    a(href="./members.html") Thành viên của làng
                 li.header-items
                     a(href="#") Đồng hành cùng con 
                 li.header-items
                     a(href="#")  Liên hệ 
+            
+    .header-mobile
+        .logo-mobile.column-2
+            a.logo-mobile-link(href="./index.html")
+                img(src="./assets/layout/header/Group1.png", alt="logo")
+        ul.header-mobile-list 
+            li.header-mobile-items
+                a(href="./village.html") Làng của con
+            li.header-mobile-items
+                a(href="./story.html") Chuyện về làng
+            li.header-mobile-items
+                a(href="#") Hằng ngày của con 
+            li.header-mobile-items
+                a(href="./members.html") Thành viên của làng
+            li.header-mobile-items
+                a(href="#") Đồng hành cùng con 
+            li.header-mobile-items
+                a(href="#")  Liên hệ 
+        .header__button
+            .header__button-border

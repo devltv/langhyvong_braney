@@ -1,0 +1,48 @@
+
+.close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 56px;
+  height: 56px;
+
+  background-color: map-get($color, bg);
+
+  box-shadow: map-get($shadow, s1);
+
+  border-radius: 0 0 0 16px;
+
+  overflow: hidden;
+  cursor: pointer;
+
+  &--rotate{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .16s transform ease-in-out;
+
+  }
+
+  .line{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    width: 55%;
+    height: 3px;
+    background-color: map-get($color, main);
+
+    &:first-child{
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+  &:hover{
+    background-color: map-get($color, bg1);
+    .close--rotate{
+      transform: rotate(90deg);
+    }
+  }
+}
