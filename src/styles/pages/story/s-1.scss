@@ -1,13 +1,15 @@
 #story-1{
+    height: 100%;
     .story-1--wrapper{
-        // margin: 70px 0;
         @include section(s70, margin-top);
         @include section(s70, margin-bottom);
-
+        display: flex;
+        flex-direction: column;
         @include rp(ts){
             margin: 30px 0;
         }
         &__title{
+            @include section(s70, margin-bottom);
             width: 100%;
             text-align: center;
         }
@@ -65,15 +67,22 @@
                     align-items: center;
                     justify-content: center;
                     padding: 0 67px ;
+                    line-height: 24px;
+                    @include lineHeight(24);
                     &>*:not(:last-child){
                         margin-bottom: 10px;
+
+                    }
+                    @include rp(tx){
+                        
+                        padding: 57px ;
                     }
                     @include rp(tm){
                         height: auto;
                         padding: 47px ;
                     }
                     @include rp(mm){
-                        padding: 37px ;
+                        padding: 27px ;
                     }
                 }
                
