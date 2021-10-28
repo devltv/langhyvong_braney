@@ -18,7 +18,7 @@ AOS.init({
 import * as fetchData from "./components/fetchData";
 
 // Layout
-
+import {banner} from "./layout/banner";
 // Page
 import {index} from "./pages/index";
 import {village} from "./pages/village";
@@ -34,6 +34,7 @@ function common(){
 }
 
 function layout(){
+  banner();
 }
 
 // function Page
