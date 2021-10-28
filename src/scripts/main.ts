@@ -19,6 +19,7 @@ import * as fetchData from "./components/fetchData";
 
 // Layout
 import {header} from "./layout/header";
+import {banner} from "./layout/banner";
 // Page
 import {index} from "./pages/index";
 import {village} from "./pages/village";
@@ -35,6 +36,7 @@ function common(){
 
 function layout(){
   header();
+  banner();
 }
 
 // function Page
