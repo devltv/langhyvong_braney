@@ -149,9 +149,10 @@ function handleClickSearch(){
 
 function toggleHamberger() {
   if (document.querySelector('header')) {
-    var ham = document.querySelector('.menubar-ham');
-    var nav = <HTMLElement>document.querySelector('.header-right-menu');
-    var items = document.querySelectorAll('.header-right-menu .menu-item');
+    console.log('1')
+    var ham = document.querySelector('.header__button');
+    var nav = <HTMLElement>document.querySelector('.header-mobile-list');
+    // var items = document.querySelectorAll('.header-right-menu .menu-item');
     var body = document.querySelector('body');
 
     ham.addEventListener('click', function () {
@@ -166,78 +167,128 @@ function toggleHamberger() {
         body.style.height = "100vh";
         body.style.overflow = "hidden";
         
-        items.forEach(function(item){
-          item.classList.remove('showSub');
-        })
+        // items.forEach(function(item){
+        //   item.classList.remove('showSub');
+        // })
         ham.classList.add('active');
         nav.classList.add('show');
       }
+      
     })
   }
 }
 
-function handleShowMenuSub(){
-  if (window.innerWidth < 641){
-    var items = document.querySelectorAll('.header-right-menu .menu-item');
-    items.forEach(function(item){
-      var linkSub = item.querySelector('.main-button__link');
-      if (linkSub){
-        linkSub.addEventListener('click', function(e){
-          e.preventDefault();
-          item.classList.add('showSub');
-        })
+function activeHamberger(evt: any) {
+  var btnHam = document.querySelector('.header__button');
+  var nav = document.querySelector('.header-mobile-list');
+  var body = document.querySelector('body');
+  if (btnHam) {
+    var evtTarget = evt.target;
+    // Kiem tra co click vao btnHam ko? Neu co thi ko lam gi` ca
+    do {
+      if (evtTarget == nav || evtTarget == btnHam) {
+        return;
       }
+      evtTarget = evtTarget.parentNode;
+    } while (evtTarget);
 
-      var sub = item.querySelector('.menu-item-sub');
-      if (sub){
-        var linkComeBack = item.querySelector('.sub-button__link');
-        if (linkComeBack){
-          linkComeBack.addEventListener('click', function(e){
-            e.preventDefault();
-            item.classList.remove('showSub');
-          })
+    // Neu ko thi se remove class active
+    
+    // btnHam.classList.remove('show');
+    btnHam.classList.remove('active');
+    nav.classList.remove('show');
+    body.style.height = "";
+    body.style.overflow = "";
+  }
+}
+//Xử lý sự kiện active trên Header
+function handleActiveHeader() {
+  if (document.getElementById('header')) {
+    document.addEventListener('click', function (e) {
+      activeHamberger(e);
+     
+    })
+    toggleHamberger();
+    // resize window
+    var btnHam = document.querySelector('.header__button');
+    var nav = document.querySelector('.header-mobile-list');
+    var body = document.querySelector('body');
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 1024) {
+       
+        // ẩn button hamberger và nav
+        if (btnHam.classList.contains('active')) {
+          btnHam.classList.remove('active');
+          nav.classList.remove('show');
+          body.style.height = "";
+          body.style.overflow = "";
         }
       }
     })
   }
+}
+// function handleShowMenuSub(){
+//   if (window.innerWidth < 641){
+//     var items = document.querySelectorAll('.header-right-menu .menu-item');
+//     items.forEach(function(item){
+//       var linkSub = item.querySelector('.main-button__link');
+//       if (linkSub){
+//         linkSub.addEventListener('click', function(e){
+//           e.preventDefault();
+//           item.classList.add('showSub');
+//         })
+//       }
 
-  window.addEventListener('resize', function(){
-    if (window.innerWidth < 641){
-      var items = document.querySelectorAll('.header-right-menu .menu-item');
-      items.forEach(function(item){
-        var linkSub = item.querySelector('.main-button__link');
-        if (linkSub){
-          linkSub.addEventListener('click', function(e){
-            e.preventDefault();
-            item.classList.add('showSub');
-          })
-        }
+//       var sub = item.querySelector('.menu-item-sub');
+//       if (sub){
+//         var linkComeBack = item.querySelector('.sub-button__link');
+//         if (linkComeBack){
+//           linkComeBack.addEventListener('click', function(e){
+//             e.preventDefault();
+//             item.classList.remove('showSub');
+//           })
+//         }
+//       }
+//     })
+//   }
+
+//   window.addEventListener('resize', function(){
+//     if (window.innerWidth < 641){
+//       var items = document.querySelectorAll('.header-right-menu .menu-item');
+//       items.forEach(function(item){
+//         var linkSub = item.querySelector('.main-button__link');
+//         if (linkSub){
+//           linkSub.addEventListener('click', function(e){
+//             e.preventDefault();
+//             item.classList.add('showSub');
+//           })
+//         }
   
-        var sub = item.querySelector('.menu-item-sub');
-        if (sub){
-          var linkComeBack = item.querySelector('.sub-button__link');
-          if (linkComeBack){
-            linkComeBack.addEventListener('click', function(e){
-              e.preventDefault();
-              item.classList.remove('showSub');
-            })
-          }
-        }
-      })
-    }
-    else{
-      var body = document.querySelector('body');
-      var ham = document.querySelector('.menubar-ham');
-      var nav = <HTMLElement>document.querySelector('.header-right-menu');
-      if (body && ham && nav){
-        body.style.height = "";
-        body.style.overflow = "";
-        ham.classList.remove('active');
-        nav.classList.remove('show');
-      }
-    }
-  })
-}
+//         var sub = item.querySelector('.menu-item-sub');
+//         if (sub){
+//           var linkComeBack = item.querySelector('.sub-button__link');
+//           if (linkComeBack){
+//             linkComeBack.addEventListener('click', function(e){
+//               e.preventDefault();
+//               item.classList.remove('showSub');
+//             })
+//           }
+//         }
+//       })
+//     }
+//     else{
+//       var body = document.querySelector('body');
+//       var ham = document.querySelector('.menubar-ham');
+//       var nav = <HTMLElement>document.querySelector('.header-right-menu');
+//       if (body && ham && nav){
+//         body.style.height = "";
+//         body.style.overflow = "";
+//         ham.classList.remove('active');
+//         nav.classList.remove('show');
+//       }
+//     }
+//   })
+// }
 
 // // Kiểm tra xem sự kiện click trên document có click vào trong menu hay submenu or là icon không?
 // // Nếu không phải thì ta sẽ không cho hiển thị Menu nữa
@@ -267,37 +318,7 @@ function handleShowMenuSub(){
 // }
 
 
-// // Xử lý sự kiện active trên Header
-// function handleActiveHeader() {
-//   if (document.getElementById('header')) {
-//     document.addEventListener('click', function (e) {
-//       activeHamberger(e);
-//       activeLanguage(e);
-//       activeOrder(e);
-//       activeOptionOrder(e);
-//     })
-//     toggleHamberger();
-//     toggleLanguage();
-//     toggleOrder();
-//     listOptionOrder();
 
-//     // resize window
-//     var btnHam = document.querySelector('.header-main__button');
-//     var nav = document.querySelector('.header-main__nav');
-
-//     window.addEventListener('resize', function () {
-//       if (window.innerWidth > 1336) {
-
-//         // ẩn button hamberger và nav
-//         if (btnHam.classList.contains('show')) {
-//           btnHam.classList.remove('show');
-//           btnHam.classList.remove('active');
-//           nav.classList.remove('active');
-//         }
-//       }
-//     })
-//   }
-// }
 
 // function toggleLanguage() {
 //   if (document.getElementById('header')) {
@@ -708,18 +729,18 @@ function handleShowMenuSub(){
 
 
 export const header = function () {
-  // handleActiveHeader();
+
   // dateTimePickerOrder();
   // submitOrder();
   // headerHamburger()
   // changeActiveHeader()
-  handleMenuHover();
-  handleScrollHeader();
-  handleClickSearch();
-  handleCancelInputSearch();
-
-  toggleHamberger();
+  // handleMenuHover();
+  // handleScrollHeader();
+  // handleClickSearch();
+  // handleCancelInputSearch();
+  handleActiveHeader() ;
+  // toggleHamberger();
 
   // hanleClickSubMenu();
-  handleShowMenuSub();
+  // handleShowMenuSub();
 }

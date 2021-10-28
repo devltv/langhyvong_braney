@@ -122,3 +122,29 @@
     display: none !important;
   }
 }
+@keyframes fadeRightTo {
+	0% {
+		opacity: 0;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+	}
+	100% {
+		opacity: 1;
+ 
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+
+	}
+	
+}
+@keyframes fadeLeftTo {
+	0% {
+    opacity: 1;
+		clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+	}
+	100% {
+		
+    opacity: 0;
+		clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+	}
+	
+}
