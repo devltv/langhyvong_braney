@@ -1,0 +1,19 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Đồng hành cùng con';
+	- let bodyClass = 'companion-page';
+	- let bannerSub = "bannerSub";
+	- let imgBanner = {};
+	- imgBanner.src = "./assets/_page/companion/banner.png"
+	- let pageName = "Đồng hành cùng con"
+
+block main
+	div(id="companionPage")
+		include _templates/companion/c-1
+		include _templates/companion/c-2
+		include _templates/companion/c-3
+		include _templates/companion/c-4
+		include _templates/companion/c-5
+    
+block scripts

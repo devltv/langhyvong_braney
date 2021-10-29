@@ -1,10 +1,223 @@
-.input-group{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+input{
+  border: none;
+  background: transparent;
+  outline: none;
+  &:focus{
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+}
 
-  &>*{
-    flex: 1;
+button{
+  border: none;
+  background: transparent;
+  outline: none;
+  &:focus{
+    border: none;
+    background: transparent;
+    outline: none;
+  }
+}
+
+button:disabled{
+  cursor: not-allowed;
+  pointer-events: all !important;
+
+  a{
+    pointer-events: none;
+  }
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.form-info{
+  width: 100%;
+  padding: 27px;
+  @include rp(mx){
+    padding: 16px;
+  }
+  background-color: map-get($color, bg-3);
+  
+  &--overlay{
+    box-shadow: map-get($shadow, s1);
+    border-radius: 30px 0 30px 0;
+
+    z-index: 1;
+
+    background-color: map-get($color, bg);
+
+    padding: 36px 58px;
+    @include rp(tx){
+      padding: 32px 48px;
+    }
+    @include rp(mx){
+      padding: 24px 36px;
+    }
+  }
+
+  label{
+    color: map-get($color, text2);
+    @include title(body);
+  }
+
+  input{
+    border: none;
+    background: transparent;
+    outline: none;
+    &:focus{
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+
+    height: 62px;
+    background-color: #F1F6F4;
+    
+    padding: 0 16px;
+    
+    @include title(sub);
+    color: map-get($color, text1);
+
+    transition: .2s all ease-in-out;
+    
+    &:focus{
+      box-shadow: map-get($shadow, s1);
+    }
+  }
+
+  .group-input--table{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    &>*{
+      flex: 1;
+    }
+  }
+  .group-input{
+    margin-top: 18px;
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    &>*{
+      width:100%;
+    }
+
+    &>*:not(:first-child){
+      margin-top: 16px;
+    }
+  }
+
+  .group-note{
+    margin-top: 12px;
+    &>*{
+      @include rp(note);
+      &.success{
+        color: map-get($color, success);
+      }
+      &.info{
+        color: map-get($color, info);
+      }
+      &.warning{
+        color: map-get($color, warning);
+      }
+      &.error{
+        color: map-get($color, error);
+      }
+      &.hidden{
+        display: none;
+      }
+      &.none{
+        display: none;
+      }
+    }
+  }
+
+  button[type="submit"]{
+    display: inline-block;
+    min-width: 268px;
+    padding: 32px 20px;
+    @include rp(tx){
+      padding: 28px 20px;
+    }
+    @include rp(mx){
+      padding: 22px 16px;
+    }
+
+    white-space: nowrap;
+    color: map-get($color, sub1);
+
+    @include medium;
+    line-height: 1.29;
+    @include title(sub);
+
+    background-color: map-get($color, bg1);
+    box-shadow: map-get($shadow, s1);
+    border-radius: 40px 0 40px 0;
+    
+    position: relative;
+    z-index: 2;
+
+    transition: .16s color ease-in-out;
+    
+    &::after{
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 9px;
+      bottom: 9px;
+      right: 9px;
+
+      @include rp(mx){
+        top: 6px;
+        left: 6px;
+        bottom: 6px;
+        right: 6px;
+      }
+
+      background-color: map-get($color, main);
+      border-radius: 30px 0 30px 0;
+      box-shadow: map-get($shadow, s1);
+      z-index: -1;
+
+      transition: .16s all ease-in-out;
+    }
+    &:disabled{
+      &::after{
+        opacity: .7;
+      }
+    }
+    &:not(:disabled){
+      cursor: pointer;
+      &:hover, &:focus{
+        &::after{
+          background-color: map-get($color, sub1);
+          top: 6px;
+          left: 6px;
+          bottom: 6px;
+          right: 6px;
+
+          @include rp(mx){
+            top: 4px;
+            left: 4px;
+            bottom: 4px;
+            right: 4px;
+          }
+        }
+        color: map-get($color, bg);
+      }
+    }
+  }
+
+  .button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

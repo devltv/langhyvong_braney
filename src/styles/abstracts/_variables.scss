@@ -5,10 +5,13 @@ $family: (
 
 $color: (
 	main: #19C579,
+	
 	bg: #FFF,
 	bg-2: #94F7BC,
+	bg-3: #D8FCE7,
 
 	sub1: #066543,
+	sub2: #D8FCE7,
 	bg1: #EFEFEF,
 
 	text1: #212121,
@@ -25,6 +28,18 @@ $color: (
 	dot2: #FFF,
 	border1: #19C579,
 	border2: #066543,
+
+	info: #00529B,
+	info-bg: #BDE5F8,
+
+	success: #4F8A10,
+	success-bg: #DFF2BF,
+
+	warning: #9F6000,
+	warning-bg: #FEEFB3,
+
+	error: #D8000C,
+	error-bg: #FFBABA,
 );
 
 $shadow:(
@@ -199,6 +214,11 @@ $section: (
 		default: 70px,
 		tx: 64px,
 		mx: 56px
+	),
+	s48:(
+		default: 48px,
+		tx: 44px,
+		mx: 36px,
 	)
 );
 

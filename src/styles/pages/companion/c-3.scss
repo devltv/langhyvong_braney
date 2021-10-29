@@ -1,0 +1,87 @@
+.companion3{
+  @include section(s70, padding-top);
+  @include section(s70, padding-bottom);
+
+  &__title{
+    text-align: center;
+    width: 100%;
+  }
+  
+  &-wrapper{
+    @include spaceIndex(s36, margin-top);
+    width: 100%;
+    
+    .slide{
+      box-shadow: map-get($shadow, s1);
+      height: 100%;
+
+      background-color: map-get($color, sub2);
+      padding: 36px 57px;
+      @include rp(tx){
+        padding: 28px 36px;
+      }
+
+      transition: .16s background ease-in-out;
+
+      &:hover{
+        background-color: rgba(map-get($color, main), .3);
+
+        .slide__icon{
+          box-shadow: map-get($shadow, s1);
+        }
+
+        .slide__desc{
+          &>*{
+            color: map-get($color, text1);
+          }
+        }
+      }
+
+      &__icon{
+        margin: 0 auto;
+
+        width: 102px;
+        height: 102px;
+
+        @include rp(tx){
+          width: 86px;
+          height: 86px;
+        }
+
+        background-color: map-get($color, main);
+
+        border-radius: 50%;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: .16s all ease-in-out;
+        &>*{
+          display: block;
+        }
+
+        svg{
+          max-height: 80%;
+        }
+      }
+
+      &__desc{
+        margin-top: 30px;
+
+        &>*{
+          width: 100%;
+          @include title(body);
+          color: map-get($color, text3);
+          line-height: 1.22;
+          letter-spacing: .25px;
+          text-align: center;
+
+          transition: .16s color ease-in-out;
+
+        }
+      }
+    }
+  }
+}

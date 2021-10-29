@@ -1,9 +1,6 @@
 .box-1{
     background: map-get($color , bg );
-    &__content{
-       
-    }
-    &__img{
+    &__img {
         position: relative;
         width: 100%;
         padding-top: 90%;
@@ -17,107 +14,107 @@
             height: 100%;
         }
     }
-    
-    &__infor{
-        box-shadow: 0px 3px 6px rgba(0,0,0,.16);
+
+    &__infor {
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         padding: 60px 20px;
         @include rp(pm){
             padding: 50px 10px;
         }
         position: relative;
-        &::after{
+        &::after {
             position: absolute;
             content: "";
             top: 0;
             left: 0;
             width: 100%;
             height: 4px;
-            background: map-get($color , main );
+            background: map-get($color, main);
         }
-        &--time{
+        &--time {
             position: absolute;
-            top: calc(0% - 40px);
+            top: 0;
             right: calc(0% + 40px);
-            width: 25%;
-            height: 30%;
-            background: map-get($color , bg);
-            border: 2px solid map-get($color, main );
+            width: 82px;
+            height: 82px;
+            transform: translateY(-50%);
+
+            background: map-get($color, bg);
+            border: 2px solid map-get($color, main);
             border-radius: 100%;
             z-index: 2;
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             &::before,
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 left: 50%;
-                transform: translate(-50% , -50%);
+                transform: translate(-50%, -50%);
                 background: map-get($color, line1);
             }
 
             &::after {
-                top: 35%;
+                top: 50%;
                 width: 2px;
                 height: 25%;
+
+                transform: translate(-50%, -100%);
             }
+
             &::before {
                 top: 50%;
                 width: 100%;
-                height: 1px;
+                height: 2px;
             }
-            .flex{    
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                
-                .day{
-                    margin-right: 8px;
-                    
-                    & > * {
-                    
-                        @include size(body2);
-                        color: map-get($color, line1);
-                        line-height: 1.2;
-                        @include regular;
-                      }
-                }
-                .month{
-                    margin-left: 8px;
-                    & > * {
-                        
-                        @include size(body2);
-                        color: map-get($color, line1);
-                        line-height: 1.2;
-                        @include regular;
-                      }
-                }      
-                
-            }
-            .year{
-                margin-top: 8px;
-                width: 100%;
-                text-align: center;
+
+            .day, .month, .year{
+                position: absolute;
+                top: auto;
+                left: auto;
+                top: 50%;
+                left: 50%;
+
+                transform: translate(-50%, -50%);
                 & > * {
-                    letter-spacing: 5px;
                     @include size(body2);
                     color: map-get($color, line1);
                     line-height: 1.2;
                     @include regular;
-                  }
+                }
+            }
+
+            .day {
+                transform: translateX(calc(-100% - 6px)) translateY(-100%);
+                text-align: right;
+            }
+            .month {
+                transform: translateX(6px) translateY(-100%);
+                text-align: left;
+            }
+
+            .year {
+                transform: translateX(-50%) translateY(6px);
+                text-align: center;
+                
+                &>*{
+                    letter-spacing: 1.8px;
+                }
             }
         }
-        &--title{
+        &--title {
             & > * {
                 text-align: justify;
                 @include title(sub);
                 color: map-get($color, text2);
                 line-height: 1.2;
                 @include regular;
-              }
+            }
         }
-        &--desc{
+        &--desc {
             margin-top: 18px;
             & > * {
                 text-align: justify;
@@ -125,7 +122,7 @@
                 color: map-get($color, text2);
                 line-height: 1.2;
                 @include regular;
-              }
+            }
         }
     }
 }
