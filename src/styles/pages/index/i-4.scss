@@ -1,8 +1,14 @@
 .index-4{
-    @include section(s70, padding-top);
+    background: map-get($color , bg-2 );
+    @include spaceIndex4(s70, padding-top);
+    @include spaceIndex4(s70, padding-bottom);
+
     &__wrapper{
-        .column{
-            width: 100%;
-        }
+        width: 100%;
+    }
+    &__title{
+        display: flex;
+        justify-content: center;
+        @include spaceIndex4(s45, margin-bottom);
     }
 }

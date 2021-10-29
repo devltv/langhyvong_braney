@@ -31,6 +31,51 @@ function Hoavan(){
   // }
 }
 
+declare var Swiper : any;
+
+function myIndexNews (){
+    if(document.getElementById("index-4")){
+        var swiper = new Swiper(".myNews", {
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            slidesPerView: 3,
+            spaceBetween: 20,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+            breakpoints: {
+                320: {
+                  slidesPerView: 1,
+                  spaceBetween: 16
+                } ,
+                481: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 16
+                },
+                769: {
+                    slidesPerView: 2,
+                    spaceBetween: 16
+                },
+                900: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 16
+                },
+                1280: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 16
+                },
+                1366:{
+                  slidesPerView: 3,
+                  spaceBetween: 16
+                }
+
+            }
+        });
+    }
+    
+}
 
 // handle click link button
 function handleClickButton(){
@@ -63,4 +108,5 @@ function handleClickButton(){
 }
 export const index = function(){
   Hoavan();
+  myIndexNews();
 }
