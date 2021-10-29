@@ -1,22 +1,28 @@
-.nav-custom{
+.nav-custom {
     position: relative;
     width: 100%;
     // z-index: 5;
-    .swiper-container{
-        .swiper-wrapper{
+
+    .swiper-container {
+        .swiper-wrapper {
             padding: 5px 0;
+
+            // height đều các item
+            align-items: stretch;
+            .swiper-slide {
+                height: auto;
+            }
         }
     }
     .swiper-button-next,
-    .swiper-button-prev
-    {
+    .swiper-button-prev {
         position: absolute;
         z-index: 2;
 
         width: 60px;
         height: 60px;
 
-        background-color: rgba(map-get($color, sub1), .1);
+        background-color: rgba(map-get($color, sub1), 0.1);
         border-radius: 50%;
 
         // @include rp(tl){
@@ -25,40 +31,55 @@
         //     height: 50px;
         // }
 
-        @include rp(pm){
-            background-color: rgba(map-get($color, sub1), .4) ;
+        @include rp(pm) {
+            background-color: rgba(map-get($color, sub1), 0.4);
             height: 50px;
-            width:50px;
+            width: 50px;
         }
 
-        @include rp(tx){
-            background-color: rgba(map-get($color, sub1), .1);
+        @include rp(tx) {
+            background-color: rgba(map-get($color, sub1), 0.1);
         }
 
         @media (max-width: 1200px) {
-            background-color: rgba(map-get($color, sub1), .4) ;
+            background-color: rgba(map-get($color, sub1), 0.4);
         }
 
-        svg{
+        @include rp(mx){
+            width: 46px;
+            height: 46px;
+        }
+
+        svg {
             width: 30px;
             height: 30px;
             // @include rp(tl){
             //     width: 20px;
             //     height: 20px;
             // }
+
+            @include rp(pm) {
+                height: 24px;
+                width: 24px;
+            }
+
+            @include rp(mx){
+                width: 22px;
+                height: 22px;
+            }
         }
-        &::after{
+        &::after {
             content: "";
         }
     }
-    .swiper-button-next{
+    .swiper-button-next {
         right: calc(-2% - 60px);
 
-        @include rp(pm){
+        @include rp(pm) {
             right: 20px;
         }
 
-        @include rp(tx){
+        @include rp(tx) {
             right: calc(-2% - 60px);
         }
 
@@ -69,14 +90,14 @@
             right: 20px;
         }
     }
-    .swiper-button-prev{
+    .swiper-button-prev {
         left: calc(-2% - 60px);
 
-        @include rp(pm){
+        @include rp(pm) {
             left: 20px;
         }
 
-        @include rp(tx){
+        @include rp(tx) {
             left: calc(-2% - 60px);
         }
 

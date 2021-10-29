@@ -1,0 +1,15 @@
+.companion5{
+  @include section(s70, padding-top);
+  @include section(s70, padding-bottom);
+
+  &__title{
+    text-align: center;
+    width: 100%;
+  }
+
+  &-wrapper{
+    @include section(s48, margin-top);
+    width: 100%;
+
+  }
+}

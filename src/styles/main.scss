@@ -20,6 +20,7 @@
 @import "components/language";
 @import "components/hoavan";
 @import "components/close";
+@import "components/close";
 
 // layout
 @import "layout/header";
@@ -28,10 +29,12 @@
 @import "layout/title";
 @import "layout/360deg";
 @import "layout/popup";
+@import "layout/info-section";
 
 // page
 @import "pages/index/style";
 @import "pages/story/style";
 @import "pages/village/style";
 @import "pages/members/style";
+@import "pages/companion/style";
 
