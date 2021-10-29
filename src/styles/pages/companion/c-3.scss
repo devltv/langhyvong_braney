@@ -42,6 +42,12 @@
 
         width: 102px;
         height: 102px;
+
+        @include rp(tx){
+          width: 86px;
+          height: 86px;
+        }
+
         background-color: map-get($color, main);
 
         border-radius: 50%;
@@ -54,6 +60,10 @@
         transition: .16s all ease-in-out;
         &>*{
           display: block;
+        }
+
+        svg{
+          max-height: 80%;
         }
       }
 
