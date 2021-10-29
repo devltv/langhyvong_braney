@@ -77,7 +77,19 @@ $spaceIndex3:(
     
 );
 
-
+$spaceIndex4:(
+    s45: (
+      default: 45px,
+     
+    ),
+   
+    s70:(
+        default: 70px,
+        pm: 50px,
+        tx: 35px,
+    ),
+    
+);
 @mixin spaceIndex($key, $name, $side: "-1") {
     @each $idx, $val in map-get($spaceIndex, #{$key}) {
       @if $side == "-1" {
@@ -122,6 +134,27 @@ $spaceIndex3:(
   }
 @mixin spaceIndex3($key, $name, $side: "-1") {
     @each $idx, $val in map-get($spaceIndex3, #{$key}) {
+      @if $side == "-1" {
+        @if $idx == default {
+          #{$name}: $val;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val;
+          }
+        }
+      } @else {
+        @if $idx == default {
+          #{$name}: $val $side;
+        } @else {
+          @media (max-width: map-get($media, $idx)) {
+            #{$name}: $val $side;
+          }
+        }
+      }
+    }
+  }
+@mixin spaceIndex4($key, $name, $side: "-1") {
+    @each $idx, $val in map-get($spaceIndex4, #{$key}) {
       @if $side == "-1" {
         @if $idx == default {
           #{$name}: $val;

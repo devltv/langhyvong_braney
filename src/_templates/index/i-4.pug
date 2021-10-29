@@ -1,7 +1,61 @@
-#index-4 
+section#index-4 
     .index-4
         .container
             .index-4__wrapper
-                .column.table-row.table-column-3.between
-                    each val in ["1","2","3"]
-                        include ../_layout/_box-1.pug
+                .index-4__title 
+                    each tit in ['1']
+                        - let title = "Tin Tức Và Sự Kiện";
+                        include ../_layout/title.pug
+                .nav-custom
+                    .swiper-container.myNews
+                        .swiper-wrapper
+                            .swiper-slide
+                                - let arrIndex4 = [["./assets/_page/index/index4-1.png","09","01","2017","Làng Hy Vọng TP Đà Nẵng – Khởi đầu Hành trình...","Cùng với gần 400 hoạt động xã hội, trách nhiệm chăm sóc sức khỏe cộng đồng mỗi năm, “hành trình 20 điểm yêu thương” năm nay sẽ là chuỗi hoạt động xuyên suốt."],]
+                                each val in arrIndex4 
+                                    - let img = val[0];
+                                    - let day = val[1];
+                                    - let month = val[2];
+                                    - let year = val[3];
+                                    - let title = val[4];
+                                    - let desc = val[5];
+                                    .index4__content 
+                                        include ../_layout/_box-1.pug
+                            .swiper-slide
+                                each val in arrIndex4
+                                    - let img = val[0];
+                                    - let day = val[1];
+                                    - let month = val[2];
+                                    - let year = val[3];
+                                    - let title = val[4];
+                                    - let desc = val[5];
+                                    .index4__content 
+                                        include ../_layout/_box-1.pug
+                            .swiper-slide
+                                each val in arrIndex4
+                                    - let img = val[0];
+                                    - let day = val[1];
+                                    - let month = val[2];
+                                    - let year = val[3];
+                                    - let title = val[4];
+                                    - let desc = val[5];
+                                    .index4__content 
+                                        include ../_layout/_box-1.pug
+                            .swiper-slide
+                                each val in arrIndex4
+                                    - let img = val[0];
+                                    - let day = val[1];
+                                    - let month = val[2];
+                                    - let year = val[3];
+                                    - let title = val[4];
+                                    - let desc = val[5];
+                                    .index4__content 
+                                        include ../_layout/_box-1.pug
+                    .swiper-button-next
+                        <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 18.121 33.414">
+                            <path id="Path_8" data-name="Path 8" d="M2300,2896l16,16-16,16" transform="translate(-2299.293 -2895.293)" fill="none" stroke="#066543" stroke-width="2"/>
+                        </svg>
+                    .swiper-button-prev
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.121 33.414">
+                            <path id="Path_8" data-name="Path 8" d="M2316,2896l-16,16,16,16" transform="translate(-2298.586 -2895.293)" fill="none" stroke="#066543" stroke-width="2"/>
+                        </svg>
+

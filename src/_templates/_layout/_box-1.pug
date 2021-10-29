@@ -1,17 +1,17 @@
 .box-1  
     .box-1__content 
         .box-1__img 
-            img(src="./assets/_page/index/index4-1.png", alt="")
+            img.lazyload(data-src= img, alt="")
         .box-1__infor 
             .box-1__infor--time 
                 .flex
                     .day 
-                        p 09
+                        p=day
                     .month 
-                        p 01
+                        p= month
                 .year 
-                    p 2017
+                    p= year
             .box-1__infor--title 
-                h2 Làng Hy Vọng TP Đà Nẵng – Khởi đầu Hành trình...
+                h2= title
             .box-1__infor--desc 
-                p Cùng với gần 400 hoạt động xã hội, trách nhiệm chăm sóc sức khỏe cộng đồng mỗi năm, “hành trình 20 điểm yêu thương” năm nay sẽ là chuỗi hoạt động xuyên suốt.
+                p= desc
