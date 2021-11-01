@@ -1,17 +1,16 @@
 extends _templates/_layout/_layout.pug
 
 block var
-	- let title = 'Chuyện về làng';
+	- let title = 'Tin tức và sự kiện';
 	- let bodyClass = 'story-page';
 	//- - let indexFooter = "indexfooter";
 	- let bannerSub = "bannerSub";
 	- let imgBanner = {};
 	- imgBanner.src = "./assets/_page/story/banner.png";
-	- let pageName = "Chuyện về làng";
+	- let pageName = "Tin tức và sự kiện";
 
 block main
-	div(id="storyPage")
-		include _templates/story/s-1
-		include _templates/story/s-2
+	div(id="newsPage")
+		include _templates/news/n-1
 
 block scripts
