@@ -25,8 +25,9 @@ import {banner} from "./layout/banner";
 // Page
 import {index} from "./pages/index";
 import {village} from "./pages/village";
-import {story} from "./pages/story"
-import {student} from "./pages/student"
+import {story} from "./pages/story";
+import {student} from "./pages/student";
+import {daily} from "./pages/daily";
 
 // import { interpolate } from "gsap/all";
 
@@ -49,7 +50,7 @@ function page(){
   // index();
   village();
   student();
-
+  daily();
   story();
 }
 

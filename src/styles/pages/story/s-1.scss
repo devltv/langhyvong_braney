@@ -66,13 +66,9 @@
                     flex-direction: column;
                     align-items: center;
                     justify-content: center;
-<<<<<<< HEAD
-                    padding: 0 67px ;
                     line-height: 24px;
                     @include lineHeight(24);
-=======
                     padding: 52px 67px;
->>>>>>> 069b6b54f9593a372f13c921f8267be341da7beb
                     &>*:not(:last-child){
                         margin-bottom: 10px;
 

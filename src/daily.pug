@@ -1,0 +1,18 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Page | Daily';
+	- let bodyClass = 'daily-page';
+	- let bannerSub = "bannerSub";
+	- let imgBanner = {};
+	- imgBanner.src = "./assets/_page/daily/banner.png"
+	- let pageName = "Hằng ngày của con"
+
+block main
+	div(id="dailyPage")
+		include _templates/daily/d-1
+		include _templates/daily/d-2
+		include _templates/daily/d-3
+		include _templates/daily/d-4
+
+block scripts
