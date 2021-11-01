@@ -102,7 +102,7 @@ function setHeightBanner(){
           var navSetWidth = div as HTMLElement
           const headerHeight = getHeightHeader as HTMLElement
           const height = headerHeight.offsetHeight
-          console.log(headerHeight.offsetHeight)
+          // console.log(headerHeight.offsetHeight)
           navSetWidth.style.paddingTop = height +"px"
           // div.forEach(function(element){
           //   var navSetWidth = element as HTMLElement

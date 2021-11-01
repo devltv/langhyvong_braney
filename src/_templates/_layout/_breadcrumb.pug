@@ -1,32 +1,20 @@
-//- if breadcrumbs
-//-   if breadcrumbs.length
-//-     section#breadcrumb
-//-       .breadcrumb
-//-         ul.breadcrumb-list.container
-//-           each bb, idx in breadcrumbs
-//-             - let attr = {};
-//-             - attr.href = bb[2];
-
-//-             if idx == 0
-//-               if bb[1] == "active"
-//-                 li.breadcrumb-item.active
-//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
-//-               else 
-//-                 li.breadcrumb-item
-//-                   a.breadcrumb-item__link()&attributes(attr)= bb[0]
-//-             else 
-//-               if bb[1] == "active"
-//-                 li.breadcrumb-item.active
-//-                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-                         <path d="M1 1L5 5L1 9" stroke="#F26F21" stroke-linecap="round"/>
-//-                     </svg>
-//-                     a.breadcrumb-item__link()&attributes(attr)= bb[0]
-//-               else 
-//-                 li.breadcrumb-item
-//-                     <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-//-                         <path d="M1 1L5 5L1 9" stroke="#F26F21" stroke-linecap="round"/>
-//-                     </svg>
-//-                     a.breadcrumb-item__link()&attributes(attr)= bb[0]
+if breadcrumbs
+  if breadcrumbs.length
+    section#breadcrumb
+      .breadcrumb
+        ul.breadcrumb-list.container
+            each val in breadcrumbPrev
+                - let attr = {}
+                - attr.href = val[1]
+                li.breadcrumb-item.active
+                    a.breadcrumb-item__link()&attributes(attr)= val[0]
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11.939" height="14.326" viewBox="0 0 11.939 14.326">
+                        <path id="Polygon_9" data-name="Polygon 9" d="M7.163,0l7.163,11.939H0Z" transform="translate(11.939) rotate(90)" fill="#9e9e9e"/>
+                    </svg>
+            each val in breadcrumbRecent
+                li.breadcrumb-item
+                    .breadcrumb-item__link= breadcrumbRecent
+           
 
 
 //- if breadcrumbs

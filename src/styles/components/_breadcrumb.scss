@@ -11,26 +11,29 @@ width: 100%;
     display: flex;
 }
 &-item {
+  margin-bottom: 10px;
   svg{
       path{
-        stroke: map-get($color, pure-grey);
+        stroke: map-get($color,text3);
       }
   }
     & > * {
-        color: map-get($color, pure-grey);
+        color: map-get($color, text3);
         margin-right: 12px;
-        
+        @include bold;
+        text-transform: capitalize;
+       
     }
-    &.active{
-        .breadcrumb-item__link{
-            color: map-get($color, main);
-        }
-        svg{
-          path{
-            stroke: map-get($color, main);
-          }
-      }
-    }
+    // &.active{
+    //     .breadcrumb-item__link{
+    //         color: map-get($color, main);
+    //     }
+    //     // svg{
+    //     //   path{
+    //     //     stroke: map-get($color, main);
+    //     //   }
+    //     // }
+    // }
     // &__link {
        
     // }
