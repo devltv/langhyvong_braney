@@ -1,0 +1,58 @@
+#daily-3{
+    .daily-3{
+        &__wrapper{
+            width: 100%;
+            margin: auto;
+            &--title{
+                width: 100%;
+                text-align: center;
+                @include section(s70, margin-bottom);
+            }
+            &--swiper{
+                .daily-3__slide{
+                    width: 100%;
+                    position: relative;
+                    padding-bottom: 100%;
+                    cursor: pointer;
+                    .link-items{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    
+                    }
+                    &:hover{
+                        .daily-3__slide-infor{
+
+                            background-color: map-get($color, sub1 );
+                        }
+                    }
+                    img{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                    &-infor{
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                        background-color: map-get($color, main );
+                        border-top-left-radius: 30px;
+                        padding: 15px 0;
+                        @include title(sub);
+                        color: white;
+                        transition: .3s ease-in-out;
+                       
+                    }
+                }
+            }
+        }
+     
+      
+    }
+  }

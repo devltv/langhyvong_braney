@@ -1,0 +1,44 @@
+#daily-1{
+  .daily-1{
+    @include section(s70, margin-top);
+    @include section(s70, margin-bottom);
+    width: 100%;
+    &__wrapper{
+      width: 100%;
+      &--swiper{
+        // width: 100%;
+        margin: 0 -8px;
+      }
+      &--title{
+        width: 100%;
+        text-align: center;
+        @include section(s70, margin-bottom);
+    }
+    }
+    &__slideBig{
+      &>*{
+        // width: 50%;
+        padding:  8px ;
+      }
+    }
+    &__slideSmall {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -8px 0;
+      &>*{
+        width: 50%;
+        padding:  8px ;
+      }
+    }
+    .myDaily-1{
+      .swiper-slide{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include rp(mx){
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}
