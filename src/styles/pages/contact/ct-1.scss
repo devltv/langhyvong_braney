@@ -1,0 +1,21 @@
+.contact-1{
+    @include spaceIndex4(s70, padding-top);
+    @include spaceIndex4(s70, padding-bottom);
+    &__title{
+        width: 100%;
+        text-align: center;
+    }
+    &__map{
+        margin-top: 40px;
+        width: 100%;
+        position: relative;
+        padding-top: 100%;
+        iframe{
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            right: 0%;
+            bottom: 0%;
+        }
+    }
+}

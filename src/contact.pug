@@ -1,0 +1,13 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Liên hệ';
+	- let bodyClass = 'contact-page';
+	//- - let indexFooter = "indexfooter";
+	- let bannerIndex = "bannerIndex";
+
+block main
+	div(id="contactPage")
+		include _templates/contact/ct-1
+
+block scripts
