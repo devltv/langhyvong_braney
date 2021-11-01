@@ -1,6 +1,6 @@
 #daily-2{
     .daily-2{
-        padding-bottom: 150px;
+        @include section(s150, padding-bottom);
         @include section(s70, padding-top);
         background-color: map-get($color, bg-2 );
         width: 100%;
@@ -11,7 +11,7 @@
             &--title{
                 width: 100%;
                 text-align: center;
-                @include section(s70, margin-bottom);
+                @include section(s48, margin-bottom);
             }
             &--swiper{
                 .daily-2__slide{

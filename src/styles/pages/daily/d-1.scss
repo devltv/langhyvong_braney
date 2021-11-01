@@ -12,7 +12,7 @@
       &--title{
         width: 100%;
         text-align: center;
-        @include section(s70, margin-bottom);
+        @include section(s48, margin-bottom);
     }
     }
     &__slideBig{
@@ -36,7 +36,7 @@
         flex-wrap: wrap;
         align-items: center;
         @include rp(mx){
-          flex-direction: column;
+          // flex-direction: column;
         }
       }
     }

@@ -22,20 +22,33 @@ function myPerson (){
                 // disableOnInteraction: false,
             },
             speed: 2000,
-            slidesPerView: 6,
+            slidesPerView: 2,
             spaceBetween: 10,
-            
+            breakpoints: {
+                641: {
+                    slidesPerView: 4
+                },
+                1025: {
+                    slidesPerView: 6
+                }
+            }
         });
     }
     if(storyPage_3){
         var swiper = new Swiper(".myDaily-3", {
             
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 10,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
-              },
+            },
+            breakpoints: {
+            
+                481: {
+                    slidesPerView: 2
+                },
+            }
         });
     }
     
