@@ -21,18 +21,20 @@
     .banner-section{
      
       // position: relative;
-      top: 75%;
+      top: unset;
+      bottom: 15%;
       left: 50%;
       transform: translate(-50%,0);
       text-align: center;
       justify-content: center;
       transition: .4s ease-in-out;
+      min-width: 300px;
       @include rp(tl){
-        top: 50%;
+        bottom: 5%;
       }
-      @include rp(mx){
-        top: 60%;
-      }
+      // @include rp(mx){
+      //   bottom: 5%;
+      // }
       .overlay__bg{
         position: absolute;
         top: 0;
@@ -49,7 +51,7 @@
         color: white;
         position: relative;
         // white-space: nowrap;
-        min-width: 250px;
+        // min-width: 250px;
         @include rp(tl){
           padding: 40px  50px;
         }
