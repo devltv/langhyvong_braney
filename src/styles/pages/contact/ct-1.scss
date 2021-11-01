@@ -6,7 +6,7 @@
         text-align: center;
     }
     &__map{
-        margin-top: 40px;
+        @include spaceIndex4(s45,margin-top);
         width: 100%;
         position: relative;
         padding-top: 100%;
