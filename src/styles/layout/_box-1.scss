@@ -119,7 +119,7 @@
             & > * {
                 text-align: justify;
                 @include size(body1);
-                color: map-get($color, text2);
+                color: map-get($color, text3);
                 line-height: 1.2;
                 @include regular;
             }

@@ -48,11 +48,11 @@ function myIndexNews (){
             breakpoints: {
                 320: {
                   slidesPerView: 1,
-                  spaceBetween: 16
+                  spaceBetween: 8
                 } ,
                 481: {
                     slidesPerView: 1.5,
-                    spaceBetween: 16
+                    spaceBetween: 8
                 },
                 769: {
                     slidesPerView: 2,

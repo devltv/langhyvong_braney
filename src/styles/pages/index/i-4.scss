@@ -11,4 +11,20 @@
         justify-content: center;
         @include spaceIndex4(s45, margin-bottom);
     }
+    .nav-custom{
+        .index4__content{
+            .box-1{
+                &__infor {
+                    &--title {
+                        &:hover{
+                            &>*{
+                                color:map-get($color , sub1 );
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
