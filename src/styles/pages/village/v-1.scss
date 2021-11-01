@@ -7,6 +7,8 @@
   }
 
   &-wrapper{
-    @include section(s70, margin-top);
+    // @include section(s70, margin-top);
+    @include section(s48, margin-top);
+
   }
 }

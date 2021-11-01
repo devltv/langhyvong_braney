@@ -10,11 +10,13 @@
             padding: 30px 0;
         }
         &__title{
-            @include section(s70, margin-bottom);
+            // @include section(s70, margin-bottom);
+            
             width: 100%;
             text-align: center;
         }
         &__content{
+            @include section(s48, margin-top);
             width: 100%;
             
             &-items{

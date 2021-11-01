@@ -9,9 +9,11 @@
     &__title{
         display: flex;
         justify-content: center;
-        @include spaceIndex4(s45, margin-bottom);
+        // @include spaceIndex4(s45, margin-bottom);
     }
     .nav-custom{
+        @include section(s48, margin-top);
+        
         .index4__content{
             .box-1{
                 &__infor {

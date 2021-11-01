@@ -15,11 +15,12 @@
     z-index: -1;
   }
   &__title{
-    @include section(s70, margin-bottom);
+    // @include section(s70, margin-bottom);
     text-align: center;
     width: 100%;
   }
   &-wrapper{
+    @include section(s48, margin-top);
     &__item{
       padding-bottom: 6px;
     }
