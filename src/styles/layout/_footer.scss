@@ -5,9 +5,16 @@
     // max-width: 1920px;
     width: 100%;
     margin: auto;
+    @include section(s70, margin-top);
     .footer {
-        @include section(s70, padding-top);
+        
         position: relative;
+        &.full{
+            padding-top: 0;
+            .overlay{
+                height: 100%;
+            }
+        }
         .overlay{
             position: absolute;
             left: 0%;

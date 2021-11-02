@@ -56,10 +56,10 @@
       position: relative;
       // overflow: hidden;
       width: 100%;
-      padding-top: 75%; // 4:3
-      @include rp(mx){
-        padding-top: 56.25% // 
-      }
+      padding-top: 56.25%; 
+      // @include rp(mx){
+      //   padding-top: 56.25% // 
+      // }
 
       &--ratio{
         position: absolute;

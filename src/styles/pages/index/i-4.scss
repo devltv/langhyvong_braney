@@ -2,6 +2,7 @@
     background: map-get($color , bg-2 );
     @include spaceIndex4(s70, padding-top);
     @include spaceIndex4(s70, padding-bottom);
+  
 
     &__wrapper{
         width: 100%;

@@ -1,68 +1,133 @@
 footer#footer 
-    .footer 
-        .overlay
-        .container 
-            .footer-map 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.7881751352747!2d108.16915781528893!3d16.07647824351299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218e46c505ab3%3A0xb5b7a7c607f1df70!2zTMOgbmcgSHkgVuG7jW5n!5e0!3m2!1svi!2s!4v1635742768021!5m2!1svi!2s" width="100%"  height="410px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            .footer__content
-                ul.footer-list 
-                    li.footer-items
-                        a(href="./village.html") Làng của con
-                    li.footer-items
-                        a(href="./story.html") Chuyện về làng
-                    li.footer-items
-                        a(href="#") Hằng ngày của con 
-                    li.footer-items
-                        .logo
-                            a.logo-link(href="./")
-                                img(src="./assets/layout/header/Group1.png", alt="logo")
-                    li.footer-items
-                        a(href="./members.html") Thành viên của làng
-                    li.footer-items
-                        a(href="./companion.html") Đồng hành cùng con 
-                    li.footer-items
-                        a(href="contact.html")  Liên hệ 
-                .footer-mobile
-                    .logo-mobile.column-2
-                        a.logo-mobile-link(href="./")
-                            img(src="./assets/layout/header/Group1.png", alt="logo")
-                    ul.footer-mobile-list 
-                        li.footer-mobile-items
+    if contact
+        .footer 
+            .overlay
+            .container 
+                .footer-map 
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.7881751352747!2d108.16915781528893!3d16.07647824351299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218e46c505ab3%3A0xb5b7a7c607f1df70!2zTMOgbmcgSHkgVuG7jW5n!5e0!3m2!1svi!2s!4v1635742768021!5m2!1svi!2s" width="100%"  height="410px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                .footer__content
+                    ul.footer-list 
+                        li.footer-items
                             a(href="./village.html") Làng của con
-                        li.footer-mobile-items
+                        li.footer-items
                             a(href="./story.html") Chuyện về làng
-                        li.footer-mobile-items
+                        li.footer-items
                             a(href="#") Hằng ngày của con 
-                        li.footer-mobile-items
+                        li.footer-items
+                            .logo
+                                a.logo-link(href="./")
+                                    img(src="./assets/layout/header/Group1.png", alt="logo")
+                        li.footer-items
                             a(href="./members.html") Thành viên của làng
-                        li.footer-mobile-items
+                        li.footer-items
                             a(href="./companion.html") Đồng hành cùng con 
-                        li.footer-mobile-items
+                        li.footer-items
                             a(href="contact.html")  Liên hệ 
-                .footer-address 
-                    p Địa chỉ: 209 Dũng Sĩ Thanh Khê, Thanh Khê Tây, Thanh Khê, Đà Nẵng
-                .footer-phone 
-                    p Điện thoại: 0236 3756 612
-                .footer-btnBackToTop 
-                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
-                        <defs>
-                            <filter id="Ellipse_63" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
-                            <feOffset dy="3" input="SourceAlpha"/>
-                            <feGaussianBlur stdDeviation="3" result="blur"/>
-                            <feFlood flood-opacity="0.161"/>
-                            <feComposite operator="in" in2="blur"/>
-                            <feComposite in="SourceGraphic"/>
-                            </filter>
-                        </defs>
-                        <g id="Group_30" data-name="Group 30" transform="translate(-934 -4271)">
-                            <g transform="matrix(1, 0, 0, 1, 934, 4271)" filter="url(#Ellipse_63)">
-                            <circle id="Ellipse_63-2" data-name="Ellipse 63" cx="17" cy="17" r="17" transform="translate(9 40) rotate(-90)" fill="#fff"/>
+                    .footer-mobile
+                        .logo-mobile.column-2
+                            a.logo-mobile-link(href="./")
+                                img(src="./assets/layout/header/Group1.png", alt="logo")
+                        ul.footer-mobile-list 
+                            li.footer-mobile-items
+                                a(href="./village.html") Làng của con
+                            li.footer-mobile-items
+                                a(href="./story.html") Chuyện về làng
+                            li.footer-mobile-items
+                                a(href="#") Hằng ngày của con 
+                            li.footer-mobile-items
+                                a(href="./members.html") Thành viên của làng
+                            li.footer-mobile-items
+                                a(href="./companion.html") Đồng hành cùng con 
+                            li.footer-mobile-items
+                                a(href="contact.html")  Liên hệ 
+                    .footer-address 
+                        p Địa chỉ: 209 Dũng Sĩ Thanh Khê, Thanh Khê Tây, Thanh Khê, Đà Nẵng
+                    .footer-phone 
+                        p Điện thoại: 0236 3756 612
+                    .footer-btnBackToTop 
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+                            <defs>
+                                <filter id="Ellipse_63" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" input="SourceAlpha"/>
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feFlood flood-opacity="0.161"/>
+                                <feComposite operator="in" in2="blur"/>
+                                <feComposite in="SourceGraphic"/>
+                                </filter>
+                            </defs>
+                            <g id="Group_30" data-name="Group 30" transform="translate(-934 -4271)">
+                                <g transform="matrix(1, 0, 0, 1, 934, 4271)" filter="url(#Ellipse_63)">
+                                <circle id="Ellipse_63-2" data-name="Ellipse 63" cx="17" cy="17" r="17" transform="translate(9 40) rotate(-90)" fill="#fff"/>
+                                </g>
+                                <path id="Path_8" data-name="Path 8" d="M0,0,8.4,8.4,0,16.8" transform="translate(951.6 4298.2) rotate(-90)" fill="none" stroke="#066543" stroke-width="2"/>
                             </g>
-                            <path id="Path_8" data-name="Path 8" d="M0,0,8.4,8.4,0,16.8" transform="translate(951.6 4298.2) rotate(-90)" fill="none" stroke="#066543" stroke-width="2"/>
-                        </g>
-                    </svg>
+                        </svg>
+    else 
+        .footer.full
+            .overlay
+            .container 
+                if contact
+                    .footer-map 
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.7881751352747!2d108.16915781528893!3d16.07647824351299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218e46c505ab3%3A0xb5b7a7c607f1df70!2zTMOgbmcgSHkgVuG7jW5n!5e0!3m2!1svi!2s!4v1635742768021!5m2!1svi!2s" width="100%"  height="410px" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                .footer__content
+                    ul.footer-list 
+                        li.footer-items
+                            a(href="./village.html") Làng của con
+                        li.footer-items
+                            a(href="./story.html") Chuyện về làng
+                        li.footer-items
+                            a(href="#") Hằng ngày của con 
+                        li.footer-items
+                            .logo
+                                a.logo-link(href="./")
+                                    img(src="./assets/layout/header/Group1.png", alt="logo")
+                        li.footer-items
+                            a(href="./members.html") Thành viên của làng
+                        li.footer-items
+                            a(href="./companion.html") Đồng hành cùng con 
+                        li.footer-items
+                            a(href="contact.html")  Liên hệ 
+                    .footer-mobile
+                        .logo-mobile.column-2
+                            a.logo-mobile-link(href="./")
+                                img(src="./assets/layout/header/Group1.png", alt="logo")
+                        ul.footer-mobile-list 
+                            li.footer-mobile-items
+                                a(href="./village.html") Làng của con
+                            li.footer-mobile-items
+                                a(href="./story.html") Chuyện về làng
+                            li.footer-mobile-items
+                                a(href="#") Hằng ngày của con 
+                            li.footer-mobile-items
+                                a(href="./members.html") Thành viên của làng
+                            li.footer-mobile-items
+                                a(href="./companion.html") Đồng hành cùng con 
+                            li.footer-mobile-items
+                                a(href="contact.html")  Liên hệ 
+                    .footer-address 
+                        p Địa chỉ: 209 Dũng Sĩ Thanh Khê, Thanh Khê Tây, Thanh Khê, Đà Nẵng
+                    .footer-phone 
+                        p Điện thoại: 0236 3756 612
+                    .footer-btnBackToTop 
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+                            <defs>
+                                <filter id="Ellipse_63" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+                                <feOffset dy="3" input="SourceAlpha"/>
+                                <feGaussianBlur stdDeviation="3" result="blur"/>
+                                <feFlood flood-opacity="0.161"/>
+                                <feComposite operator="in" in2="blur"/>
+                                <feComposite in="SourceGraphic"/>
+                                </filter>
+                            </defs>
+                            <g id="Group_30" data-name="Group 30" transform="translate(-934 -4271)">
+                                <g transform="matrix(1, 0, 0, 1, 934, 4271)" filter="url(#Ellipse_63)">
+                                <circle id="Ellipse_63-2" data-name="Ellipse 63" cx="17" cy="17" r="17" transform="translate(9 40) rotate(-90)" fill="#fff"/>
+                                </g>
+                                <path id="Path_8" data-name="Path 8" d="M0,0,8.4,8.4,0,16.8" transform="translate(951.6 4298.2) rotate(-90)" fill="none" stroke="#066543" stroke-width="2"/>
+                            </g>
+                        </svg>
     .footer-copyright
         .container
             .footer-copyright__title
-                p Copyright © 2021 .Thiết kế &amp; tài trợ bởi Braney
-                
+                p Copyright © 2021 .Thiết kế &amp; tài trợ bởi Braney     
+                               
