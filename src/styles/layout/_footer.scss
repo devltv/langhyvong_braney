@@ -6,7 +6,7 @@
     width: 100%;
     margin: auto;
     .footer {
-        @include spaceIndex4(s70, padding-top);
+        @include section(s70, padding-top);
         position: relative;
         .overlay{
             position: absolute;
