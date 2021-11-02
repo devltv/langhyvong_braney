@@ -37,7 +37,7 @@
             & > * {
                 text-align: justify;
                 @include title(sub);
-                color: map-get($color, text2);
+                color: map-get($color, text1);
                 line-height: 1.2;
                 @include regular;
             }
