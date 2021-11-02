@@ -12,10 +12,10 @@ declare var $ : any;
 
 // import axios from "axios";
 
-
 //////////////////////////////////////////////////////////
 // Common function
 import * as fetchData from "./components/fetchData";
+import {number} from "./components/runNumber";
 
 // Layout
 import {_popup} from "./layout/_popup";
@@ -35,7 +35,8 @@ import {daily} from "./pages/daily";
 ///////////////////////////////////////////////////////////////
 // function Common
 function common(){
-  fetchData;
+  // fetchData;
+  number();
 }
 
 function layout(){
@@ -56,11 +57,9 @@ function page(){
   companion();
 }
 
-
-
 ////////////////////////////////////////////////////////////////
 document.addEventListener("DOMContentLoaded", function(){
-  // common();
+  common();
   layout();
   page();
 });

@@ -39,8 +39,8 @@ function myIndexNews (){
             pagination: {
               el: ".swiper-pagination",
             },
-            slidesPerView: 3,
-            spaceBetween: 20,
+            slidesPerView: 1,
+            spaceBetween: 8,
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

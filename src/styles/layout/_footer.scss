@@ -117,6 +117,10 @@
                 list-style-type: none; 
                 align-items: center;
                 flex-wrap: wrap;
+
+                @include rp(mx){
+                    align-items: stretch;
+                }
             }
             &-items{
                 padding: 10px 10px;
@@ -135,6 +139,9 @@
         }
         &-address {
             margin-top: 32px;
+            @include rp(mx){
+                padding: 0 10px;
+            }
             @include rp(tl){
                 margin-top: 24px;
             }
@@ -150,6 +157,9 @@
         }
         &-phone {
             margin-top: 32px;
+            @include rp(mx){
+                padding: 0 10px;
+            }
             @include rp(tl){
                 margin-top: 24px;
             }
