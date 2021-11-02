@@ -40,6 +40,8 @@ $color: (
 
 	error: #D8000C,
 	error-bg: #FFBABA,
+
+	date: #FF8300,
 );
 
 $shadow:(
@@ -219,6 +221,11 @@ $section: (
 		default: 48px,
 		tx: 44px,
 		mx: 36px,
+	),
+	s150:(
+		default: 150px,
+		tx: 100px,
+		mx: 50px,
 	)
 );
 

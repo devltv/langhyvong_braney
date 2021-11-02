@@ -37,14 +37,14 @@ section#news1
         .news1-sample.column-4.margin-left-auto.column-12-tm
           - let arrIndex4 = [["./assets/_page/index/index4-1.png","09","01","2017","Làng Hy Vọng TP Đà Nẵng – Khởi đầu Hành trình...","Cùng với gần 400 hoạt động xã hội, trách nhiệm chăm sóc sức khỏe cộng đồng mỗi năm, “hành trình 20 điểm yêu thương” năm nay sẽ là chuỗi hoạt động xuyên suốt."],["./assets/_page/index/index4-1.png","09","01","2017","Làng Hy Vọng TP Đà Nẵng – Khởi đầu Hành trình...","Cùng với gần 400 hoạt động xã hội, trách nhiệm chăm sóc sức khỏe cộng đồng mỗi năm, “hành trình 20 điểm yêu thương” năm nay sẽ là chuỗi hoạt động xuyên suốt."]]
           each val in arrIndex4 
-              - let img = val[0];
-              - let day = val[1];
-              - let month = val[2];
-              - let year = val[3];
-              - let title = val[4];
-              - let desc = val[5];
-              .news1-sample__item
-                a(href="#") 
-                  include ../_layout/_box-1.pug
+            - let img = val[0];
+            - let day = val[1];
+            - let month = val[2];
+            - let year = val[3];
+            - let title = val[4];
+            - let desc = val[5];
+            .news1-sample__item
+              a(href="./details.html") 
+                include ../_layout/_box-1.pug
 
 

@@ -1,0 +1,41 @@
+#news-details{
+    .news-details{
+        @include section(s70, margin-top);
+        @include section(s70, margin-bottom);
+        &__wrapper{
+            &--title{
+                @include title(small);
+                color: map-get($color, text1 );
+                margin-bottom: 15px  ;
+            }
+            &--date{
+                @include title(note);
+                color: map-get($color, date );
+                margin-bottom: 20px ;
+            }
+            &--details{
+                &>*{
+                    margin-bottom: 20px ;
+                    line-height: 24px;
+                }
+                .image-section{
+                    width: 90%;
+                    margin-left:  auto;
+                    margin-right:  auto;
+                    @include rp(mx){
+                        width: 100%;
+                    }
+                    &__infor{
+                        width: 100%;
+                        text-align: center;
+                        margin: 30px 0;
+                        @include rp(mx){
+                            margin: 15px 0;
+                        }
+                        color: map-get($color, text3 );
+                    }
+                }
+            }
+        }
+    }
+}

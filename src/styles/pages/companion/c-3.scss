@@ -8,7 +8,8 @@
   }
   
   &-wrapper{
-    @include spaceIndex(s36, margin-top);
+    // @include spaceIndex(s36, margin-top);
+    @include section(s48, margin-top);
     width: 100%;
     
     .slide{

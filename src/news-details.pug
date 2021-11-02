@@ -1,0 +1,21 @@
+extends _templates/_layout/_layout.pug
+
+block var
+	- let title = 'Tin tức và sự kiện';
+	- let bodyClass = 'story-page-details';
+	//- - let indexFooter = "indexfooter";
+	- let bannerSub = "bannerSub";
+	- let imgBanner = {};
+	- imgBanner.src = "./assets/_page/story/banner.png";
+	- let pageName = "Những tấm gương hoàn cảnh khó khăn hiếu học vươn lên của các con ở làng";
+	- let breadcrumbs = "breadcrumbs";
+	
+	- let breadcrumbPrev = [["Chuyện về làng","./story.html"]]
+	- let breadcrumbRecent = ["Những tấm gương hoàn cảnh khó khăn hiếu học vươn lên của các con ở làng"]
+
+
+block main
+	div(id="news-detailsPage")
+		include _templates/news-details/n-d-1
+
+block scripts

@@ -1,0 +1,37 @@
+#daily-2{
+    .daily-2{
+        @include section(s150, padding-bottom);
+        @include section(s70, padding-top);
+        background-color: map-get($color, bg-2 );
+        width: 100%;
+        &__wrapper{
+            width: 100%;
+            max-width: 1920px;
+            margin: auto;
+            &--title{
+                width: 100%;
+                text-align: center;
+                @include section(s48, margin-bottom);
+            }
+            &--swiper{
+                .daily-2__slide{
+                    padding-bottom: 100%;
+                    position: relative;
+                    &>*{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+        &__slide{
+            width: 100%;
+           
+        }
+     
+      
+    }
+  }
