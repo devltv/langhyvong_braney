@@ -39,6 +39,8 @@
       line-height: 1.29; 
     }
     img{
+      display: block;
+      height: auto;
       &:not(:first-child){
         margin-top: 32px;
       }
@@ -70,8 +72,6 @@
     img + p {
       margin-top: 32px;
     }
-
-    
   }
 
   &-sample{

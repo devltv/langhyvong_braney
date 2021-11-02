@@ -14,27 +14,81 @@
                 margin-bottom: 20px ;
             }
             &--details{
+                // &>*{
+                //     margin-bottom: 20px ;
+                //     line-height: 24px;
+                // }
+                // .image-section{
+                //     width: 90%;
+                //     margin-left:  auto;
+                //     margin-right:  auto;
+                //     @include rp(mx){
+                //         width: 100%;
+                //     }
+                //     &__infor{
+                //         width: 100%;
+                //         text-align: center;
+                //         margin: 30px 0;
+                //         @include rp(mx){
+                //             margin: 15px 0;
+                //         }
+                //         color: map-get($color, text3 );
+                //     }
+                // }
+
                 &>*{
-                    margin-bottom: 20px ;
-                    line-height: 24px;
-                }
-                .image-section{
+                    @include title(sub);
+                    color: map-get($color, text2);
+                    @include regular;
+                    line-height: 1.29; 
+                  }
+                  img{
+                    display: block;
                     width: 90%;
-                    margin-left:  auto;
-                    margin-right:  auto;
+                    height: auto;
+                    margin-left: auto;
+                    margin-right: auto;
                     @include rp(mx){
                         width: 100%;
                     }
-                    &__infor{
-                        width: 100%;
-                        text-align: center;
-                        margin: 30px 0;
-                        @include rp(mx){
-                            margin: 15px 0;
-                        }
-                        color: map-get($color, text3 );
+                    &:not(:first-child){
+                      margin-top: 32px;
                     }
-                }
+                  }
+                  p{
+                    @include title(body);
+                    color: map-get($color, text3);
+              
+                    &.alt{
+                        display: block;
+                        text-align: center;
+                        width: 90%;
+
+                        margin-left: auto;
+                        margin-right: auto;
+
+                        @include rp(mx){
+                            width: 100%;
+                        }
+
+                        color: map-get($color, text3);
+                        @include title(note);
+                
+                        margin-top: 16px;
+                    }      
+                  }
+              
+                  p + p{
+                    margin-top: 16px;
+                  }
+              
+                  p.alt + p{
+                    margin-top: 32px;
+                  }
+                  
+                  img + p {
+                    margin-top: 32px;
+                  }
             }
         }
     }

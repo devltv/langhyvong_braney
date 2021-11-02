@@ -84,7 +84,7 @@
 
     &::after {
         top: 50%;
-        width: 2px;
+        border-left: 2px solid map-get($color, line1);
         height: 25%;
 
         transform: translate(-50%, -100%);
@@ -93,7 +93,8 @@
     &::before {
         top: 50%;
         width: 60%;
-        height: 2px;
+        // height: 2px;
+        border-top: 2px solid map-get($color, line1);
     }
 
     .day, .month, .year{
