@@ -21,6 +21,7 @@ import {number} from "./components/runNumber";
 import {_popup} from "./layout/_popup";
 
 import {header} from "./layout/header";
+import {footer} from "./layout/footer";
 import {banner} from "./layout/banner";
 // Page
 import {index} from "./pages/index";
@@ -42,6 +43,7 @@ function common(){
 function layout(){
   _popup();
   header();
+  footer();
   banner();
 }
 
