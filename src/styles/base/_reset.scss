@@ -38,7 +38,17 @@ body {
 	
 	@include family--primary;
 	@include regular;
+
+	&.hiddenScroll{
+		height: 100vh;
+		overflow: hidden;
+	}
 }
+
+// 16:9      |       56.25%
+// 4:3       |       75%
+// 3:2       |       66.66%
+// 8:5       |       62.5%
 
 main,
 #banner,

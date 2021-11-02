@@ -3,14 +3,12 @@ declare var Swiper : any;
 function MyStudent (){
     const memberPage = document.getElementById("members1")
     if(memberPage){
-        
-        var swiper_thumb = new Swiper(".myStudent-thumb", {
-            
+        var swiper_thumb = new Swiper("#members1 .myStudent-thumb", {
             slidesPerView: 3,
             spaceBetween: 16,
             navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              nextEl: "#members1 .swiper-button-next",
+              prevEl: "#members1 .swiper-button-prev",
             },
             breakpoints: {
              
@@ -20,7 +18,7 @@ function MyStudent (){
               }
           }
         });
-        var swiper = new Swiper(".myStudent", {
+        var swiper = new Swiper("#members1 .myStudent", {
           autoHeight: true,
           slidesPerView: 1,
           spaceBetween: 20,

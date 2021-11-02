@@ -50,12 +50,16 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    max-height: 100%;
 
     &-container{
       position: relative;
-      overflow: hidden;
+      // overflow: hidden;
       width: 100%;
-      padding-top: 56.25%;
+      padding-top: 75%; // 4:3
+      @include rp(mx){
+        padding-top: 56.25% // 
+      }
 
       &--ratio{
         position: absolute;
@@ -65,6 +69,16 @@
         right: 0;
         width: 100%;
         height: 100%;
+
+        .nav-custom{
+          height: 100%;
+          .swiper-popup{
+            height: 100%;
+            .myStudent__slide{
+              height: 100%;
+            }
+          }
+        }
       }
     }
   }
