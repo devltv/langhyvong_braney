@@ -18,7 +18,13 @@
 
   &:hover{
     background-color: map-get($color, bg1);
-
+    .card-members-content{
+      &__title{
+        &>*{
+          color: map-get($color , text1 );
+        }
+      }
+    }
     .card-members__img{
       &::after{
         animation: backgroundFull .9s ease-in-out forwards;
@@ -113,6 +119,7 @@
         color: map-get($color, text2);
         line-height: 1.29;
       }
+      
     }
     &__desc{
       margin-top: 12px;

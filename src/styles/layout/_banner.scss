@@ -6,6 +6,10 @@
   position: relative;
   overflow: hidden;
   transition: .3s ease-in-out;
+  @include rp(tl){
+    min-height: 800px;
+    
+  }
   &.bannerSub{
     @include rp(tl){
       height: 200px;
@@ -219,13 +223,13 @@
         background-color: map-get($color, sub1 );
         &_title{
           @include title(big);
-          @include p-line-clamp(3);
+          // @include p-line-clamp(3);
           margin-bottom: 20px;
           color: white
         }
         &_decs{
           // @include title(big);
-          @include p-line-clamp(8);
+          // @include p-line-clamp(8);
           color: white;
         }
       }

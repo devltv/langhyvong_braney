@@ -19,6 +19,9 @@
           cursor: pointer;
         }
       }
+      .myStudent-thumb{
+        margin-top: 16px;
+      }
       .myStudent {
         border: solid 1px map-get($color, text3);
         &__slide {

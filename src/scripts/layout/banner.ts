@@ -98,7 +98,7 @@ function displayWindowSize() {
 function setHeightBanner(){
     var div = document.querySelector('#banner .banner');
         if(div){
-          var getHeightHeader = document.querySelector(".header")
+          var getHeightHeader = document.querySelector("#header")
           var navSetWidth = div as HTMLElement
           const headerHeight = getHeightHeader as HTMLElement
           const height = headerHeight.offsetHeight
