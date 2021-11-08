@@ -1,7 +1,6 @@
 #news-details{
     .news-details{
         @include section(s70, margin-top);
-        @include section(s70, margin-bottom);
         &__wrapper{
             &--title{
                 @include title(small);

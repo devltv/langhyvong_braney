@@ -46,12 +46,16 @@ function myIndexNews (){
                 prevEl: ".swiper-button-prev",
               },
             breakpoints: {
-                320: {
+                240: {
                   slidesPerView: 1,
                   spaceBetween: 8
                 } ,
-                481: {
+                320: {
                     slidesPerView: 1.5,
+                    spaceBetween: 8
+                },
+                640: {
+                    slidesPerView: 2,
                     spaceBetween: 8
                 },
                 769: {

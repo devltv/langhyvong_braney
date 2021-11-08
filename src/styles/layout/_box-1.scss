@@ -18,8 +18,15 @@
     &__infor {
         box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
         padding: 60px 20px 42px 20px;
-
+        display: flex;
+        flex-direction: column;
+        height: 288px;
         @include rp(pm){
+            height: 250px;
+            padding: 52px 10px 36px 10px;
+        }
+        @include rp(pm){
+            height: 230px;
             padding: 52px 10px 36px 10px;
         }
         position: relative;
@@ -34,6 +41,7 @@
         }
         
         &--title {
+            flex: 1;    
             & > * {
                 text-align: justify;
                 @include title(sub);
@@ -43,9 +51,10 @@
             }
         }
         &--desc {
+            
             margin-top: 18px;
             & > * {
-                text-align: justify;
+                // text-align: justify;
                 @include size(body1);
                 color: map-get($color, text3);
                 line-height: 1.2;
